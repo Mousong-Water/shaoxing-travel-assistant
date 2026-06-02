@@ -75,27 +75,46 @@ class CrossValidator:
         return verified
 
     def _merge_by_name(self, raw: Dict[str, List[Dict]]) -> Dict[str, Dict[str, List[Dict]]]:
-        """按景点名称归并多源数据"""
+        """按名称归并: 景点合并, 美食/游记/活动/线路保持独立"""
         merged = defaultdict(lambda: defaultdict(list))
 
         for source_key, items in raw.items():
             for item in items:
-                name = self._normalize_name(
-                    item.get('名称', '') or
-                    item.get('店名', '') or
-                    item.get('name', '')
-                )
+                name = self._get_item_name(item)
                 if not name or len(name) < 2:
                     continue
-                merged[name][source_key].append(item)
+
+                # 非景点数据用 source_key+name 作为唯一键，避免错误合并
+                if self._is_attraction_data(item):
+                    key = self._normalize_name(name)
+                else:
+                    cat = item.get('_data_category', 'other')
+                    key = f"{cat}::{source_key}::{name}"
+
+                merged[key][source_key].append(item)
 
         return dict(merged)
+
+    # 非景点类型数据的名称键 (不需要跨源合并)
+    _NON_MERGE_KEYS = {'店名', '标题', '主题', '线路名', '景点'}
+
+    def _get_item_name(self, item: Dict) -> str:
+        """从各种键中提取条目名称"""
+        for key in ['名称', '店名', '标题', '景点', '线路名', '主题', 'name']:
+            val = item.get(key, '')
+            if val and str(val).strip():
+                return str(val).strip()
+        return ''
+
+    def _is_attraction_data(self, item: Dict) -> bool:
+        """判断是否为景点数据 (需要跨源合并)"""
+        cat = item.get('_data_category', '')
+        return cat in ('attraction_basic', 'attraction_culture', '', None)
 
     def _normalize_name(self, name: str) -> str:
         """名称标准化: 去除括号、空格等干扰"""
         import re
         name = name.strip()
-        # 去除括号注释: "东湖(绍兴)" → "东湖"
         name = re.sub(r'[（(][^)）]*[)）]', '', name)
         return name
 
@@ -115,7 +134,17 @@ class CrossValidator:
         for items in sources.values():
             all_items.extend(items)
 
-        # 1. 提取各字段的值及来源
+        # 非景点数据(美食/游记/活动/线路): 保留原始字段, 不合并
+        if all_items and not self._is_attraction_data(all_items[0]):
+            first = dict(all_items[0])
+            first['数据来源'] = '|'.join(source_list)
+            first['来源数量'] = num_sources
+            first['来源详情'] = {k: len(v) for k, v in sources.items()}
+            first['信任等级'] = first.get('_trust_level', 1)
+            first['内容分类'] = first.get('_data_category', '')
+            return first
+
+        # 1. 景点数据: 提取各字段的值及来源
         fields = {
             '地址': self._collect_field(all_items, '地址'),
             '开放时间': self._collect_field(all_items, '开放时间'),
