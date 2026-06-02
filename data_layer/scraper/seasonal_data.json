@@ -1,0 +1,147 @@
+{
+  "description": "绍兴景点季节性活动数据 - 手工维护，避免频繁爬取",
+  "last_updated": "2026-06-02",
+  "events": [
+    {
+      "attraction_name": "兰亭景区",
+      "season": "春",
+      "special_event": "兰亭书法节（每年农历三月初三）",
+      "crowd_prediction": "书法节期间人流量极大，建议提前预约",
+      "best_visit_time": "3月下旬-4月中旬",
+      "tips": "春季可体验曲水流觞活动，竹林新绿景色最佳"
+    },
+    {
+      "attraction_name": "兰亭景区",
+      "season": "秋",
+      "special_event": "金秋书法展（10月）",
+      "crowd_prediction": "中等，周末偏多",
+      "best_visit_time": "10月中旬-11月",
+      "tips": "秋季兰亭书法展期间有现场挥毫表演"
+    },
+    {
+      "attraction_name": "大禹陵",
+      "season": "春",
+      "special_event": "大禹陵祭祀大典（清明节前后）",
+      "crowd_prediction": "祭祀大典当天极高",
+      "best_visit_time": "4月上旬（祭祀大典前后）",
+      "tips": "清明前后可在禹陵参与祭禹活动"
+    },
+    {
+      "attraction_name": "绍兴柯岩风景区",
+      "season": "春",
+      "special_event": "鉴湖花朝节（3-4月）",
+      "crowd_prediction": "周末高，工作日中等",
+      "best_visit_time": "3月下旬-4月",
+      "tips": "春季鉴湖花海盛开，适合摄影"
+    },
+    {
+      "attraction_name": "绍兴柯岩风景区",
+      "season": "秋",
+      "special_event": "鉴湖桂花节（9-10月）",
+      "crowd_prediction": "国庆期间极高，其余时段中等",
+      "best_visit_time": "9月下旬-10月中旬",
+      "tips": "鉴湖畔桂花飘香，可乘乌篷船赏桂"
+    },
+    {
+      "attraction_name": "沈园",
+      "season": "春",
+      "special_event": "沈园梅花节（2-3月）",
+      "crowd_prediction": "周末中高",
+      "best_visit_time": "2月下旬-3月中旬",
+      "tips": "梅花盛开时节，夜游沈园别有风味"
+    },
+    {
+      "attraction_name": "沈园",
+      "season": "秋",
+      "special_event": "沈园菊花展（10-11月）",
+      "crowd_prediction": "中等",
+      "best_visit_time": "10月下旬-11月",
+      "tips": "秋季菊花展配合陆游唐婉故事主题展览"
+    },
+    {
+      "attraction_name": "东湖",
+      "season": "春",
+      "special_event": "东湖桃花节（3-4月）",
+      "crowd_prediction": "周末高",
+      "best_visit_time": "3月中旬-4月上旬",
+      "tips": "桃花盛开期乘乌篷船游览别有洞天"
+    },
+    {
+      "attraction_name": "东湖",
+      "season": "夏",
+      "special_event": "东湖荷花节（6-8月）",
+      "crowd_prediction": "暑期较高",
+      "best_visit_time": "6月下旬-7月，上午9点前",
+      "tips": "夏季荷花满湖，东湖水洞内外温差约10℃为天然避暑地"
+    },
+    {
+      "attraction_name": "鲁迅故里",
+      "season": "春",
+      "special_event": "鲁迅文化周（4月下旬）",
+      "crowd_prediction": "活动期间高",
+      "best_visit_time": "全年均可，春秋最佳",
+      "tips": "百草园春季油菜花与古建筑相映成趣"
+    },
+    {
+      "attraction_name": "安昌古镇",
+      "season": "冬",
+      "special_event": "安昌腊月风情节（腊月）",
+      "crowd_prediction": "腊月节期间极高",
+      "best_visit_time": "12月-次年1月（腊味季节）",
+      "tips": "冬季安昌古镇腊味飘香，可体验传统年味美食"
+    },
+    {
+      "attraction_name": "安昌古镇",
+      "season": "秋",
+      "special_event": "安昌酱文化节（9-10月）",
+      "crowd_prediction": "中等",
+      "best_visit_time": "9月-10月",
+      "tips": "秋季酱油开缸，可参观传统酱园"
+    },
+    {
+      "attraction_name": "会稽山",
+      "season": "秋",
+      "special_event": "会稽山红叶节（10-11月）",
+      "crowd_prediction": "周末高",
+      "best_visit_time": "10月下旬-11月中旬",
+      "tips": "秋季红叶漫山，登高望远可览绍兴全景"
+    }
+  ],
+  "seasonal_general": {
+    "春": {
+      "months": [3, 4, 5],
+      "description": "绍兴春季气候温和，花季丰富。适宜赏花、访古、书法文化体验",
+      "recommended_categories": ["自然风光", "人文历史", "古镇街区"],
+      "tips": "清明前后游客较多，建议错峰出行"
+    },
+    "夏": {
+      "months": [6, 7, 8],
+      "description": "夏季炎热潮湿，注意防暑。适合亲水、夜间活动、室内场馆",
+      "recommended_categories": ["自然风光", "文博场馆", "休闲娱乐"],
+      "tips": "中午高温时段建议安排室内景点或午休，早晚清凉时段游览室外景点"
+    },
+    "秋": {
+      "months": [9, 10, 11],
+      "description": "秋季天高气爽，是绍兴最佳旅游季节。桂花飘香、红叶满山",
+      "recommended_categories": ["自然风光", "人文历史", "古镇街区", "休闲娱乐"],
+      "tips": "国庆假期人流极大，建议避开或提前预约；10月中下旬是黄金窗口期"
+    },
+    "冬": {
+      "months": [12, 1, 2],
+      "description": "冬季湿冷，游客稀少。适合古镇体验、温泉休闲、传统年俗",
+      "recommended_categories": ["古镇街区", "文博场馆", "宗教场所", "休闲娱乐"],
+      "tips": "室内景点不受季节影响；安昌腊月风情节是冬季亮点"
+    }
+  },
+  "crowd_rules": {
+    "base_levels": {"高": 3, "中": 2, "低": 1},
+    "month_modifiers": {
+      "5": 1.5, "10": 1.5,
+      "7": 1.3, "8": 1.3,
+      "12": 0.7, "1": 0.6, "2": 0.7
+    },
+    "weekend_modifier": 1.3,
+    "holiday_modifier": 2.0,
+    "peak_hours": "9:00-11:00;14:00-16:00"
+  }
+}
