@@ -82,25 +82,36 @@ def main():
             print(f"  {name}: ERROR - {e}")
             raw[name] = []
 
-    # ========== Phase D: 交叉验证 (修复后) ==========
-    print("\n[Phase D] 交叉验证 (单源保留L1)...")
-    verified = CrossValidator().validate(raw)
-    trust = {}
-    for r in verified:
-        t = r.get("信任等级", 0)
-        trust[t] = trust.get(t, 0) + 1
-    print(f"  验证后: {len(verified)} 条")
-    print(f"  信任: L4={trust.get(4,0)} L3={trust.get(3,0)} L2={trust.get(2,0)} L1={trust.get(1,0)}")
+    # ========== Phase D: 交叉验证 (仅传统爬虫数据) ==========
+    print("\n[Phase D] 交叉验证 (传统爬虫数据)...")
+    traditional_keys = ['gov_api','baike','dianping','mafengwo','local_news','wenglv','weixin','xiaohongshu','zhihu']
+    traditional_raw = {k: v for k, v in raw.items() if k in traditional_keys}
+    generator_raw = {k: v for k, v in raw.items() if k.startswith('gen_') or k.startswith('generator_')}
 
-    # 事实检查
-    issues = 0
-    for r in verified:
-        issues += len(FactChecker.check_spot_data(r))
+    verified_traditional = CrossValidator().validate(traditional_raw)
+    print(f"  传统爬虫验证: {len(verified_traditional)} 条")
+
+    # 检查事实
+    issues = sum(len(FactChecker.check_spot_data(r)) for r in verified_traditional)
     print(f"  事实检查: {issues} 个标记")
+
+    # 生成器数据直接展开(不经过合并验证)
+    generator_items = []
+    for k, items in generator_raw.items():
+        for item in items:
+            item['数据来源'] = item.get('来源平台', 'comprehensive')
+            item['信任等级'] = item.get('_trust_level', item.get('信任等级', 3))
+            item['内容分类'] = item.get('_data_category', '')
+            generator_items.append(item)
+    print(f"  生成器数据直通: {len(generator_items)} 条")
+
+    # 合并
+    all_verified = verified_traditional + generator_items
+    print(f"  合并总计: {len(all_verified)} 条")
 
     # ========== Phase E: 分类 ==========
     print("\n[Phase E] 内容分类...")
-    classified = ContentClassifier().classify(verified)
+    classified = ContentClassifier().classify(all_verified)
 
     # ========== Phase E2: 数据清洗管线 v2 ==========
     print("\n[Phase E2] 数据清洗 v2 (去重+填字段+统分类)...")
