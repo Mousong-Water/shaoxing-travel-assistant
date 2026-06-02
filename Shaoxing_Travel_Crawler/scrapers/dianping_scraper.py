@@ -133,7 +133,7 @@ class DianpingScraper:
                 '推荐': shop['推荐'],
                 '简介': shop['简介'],
                 '来源': 'dianping_static',
-                '来源URL': shop.get('来源URL', f'dianping_static:{shop[\"店名\"]}'),
+                '来源URL': shop.get('来源URL', 'dianping_static:' + shop['店名']),
                 '_data_category': 'food_shop',
                 '_trust_level': 2,
             })
