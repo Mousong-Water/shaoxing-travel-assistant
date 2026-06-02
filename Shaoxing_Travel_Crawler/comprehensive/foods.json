@@ -1,0 +1,1138 @@
+[
+  {
+    "name": "咸亨酒店",
+    "category": "绍兴菜·老字号",
+    "address": "越城区鲁迅中路179号",
+    "avg_price": "80-120元",
+    "signature_dishes": [
+      "茴香豆",
+      "绍兴黄酒",
+      "梅干菜扣肉",
+      "糟鸡",
+      "醉蟹"
+    ],
+    "description": "创建于清光绪二十年（1894年），因鲁迅小说《孔乙己》闻名天下。'多乎哉？不多也'的茴香豆配一碗太雕酒是标配。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "寻宝记绍兴菜",
+    "category": "绍兴菜·网红",
+    "address": "越城区仓桥直街114号",
+    "avg_price": "70-100元",
+    "signature_dishes": [
+      "醉蟹",
+      "梅干菜扣肉",
+      "宋嫂鱼羹",
+      "绍兴三臭"
+    ],
+    "description": "仓桥直街核心位置的新派绍兴菜馆，装修古色古香，常年排队。将传统绍兴菜与现代口味完美结合。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "状元楼",
+    "category": "绍兴菜·老牌",
+    "address": "越城区胜利西路",
+    "avg_price": "60-90元",
+    "signature_dishes": [
+      "清汤越鸡",
+      "干菜焖肉",
+      "鉴湖鱼头",
+      "绍三鲜"
+    ],
+    "description": "绍兴老牌酒楼，以传统绍兴菜见长。清汤越鸡选用本地越鸡，汤清味醇，是绍兴十大名菜之一。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "孔乙己酒家",
+    "category": "绍兴菜·主题",
+    "address": "越城区鲁迅中路273号",
+    "avg_price": "70-100元",
+    "signature_dishes": [
+      "茴香豆",
+      "花雕鸡",
+      "绍兴三臭",
+      "臭豆腐"
+    ],
+    "description": "鲁迅主题绍兴菜馆，店内随处可见《孔乙己》元素。'多乎哉？不多也'的茴香豆是每桌必点。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "绍兴饭店",
+    "category": "绍兴菜·高端",
+    "address": "越城区环山路8号",
+    "avg_price": "150-250元",
+    "signature_dishes": [
+      "鉴湖河鲜",
+      "花雕醉蟹",
+      "干菜焖肉",
+      "绍式虾球"
+    ],
+    "description": "绍兴最老牌高端酒店，位于府山脚下园林式建筑。接待过众多中外政要，是体验正宗绍兴官府菜首选。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "绍东家",
+    "category": "绍兴菜·连锁",
+    "address": "越城区世茂广场",
+    "avg_price": "50-80元",
+    "signature_dishes": [
+      "花雕醉鸡",
+      "酱鸭",
+      "酒酿圆子",
+      "臭豆腐"
+    ],
+    "description": "绍兴本地连锁品牌，菜品标准化环境干净现代。适合不习惯苍蝇馆子的游客，味道正宗价格亲民。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "柒舍小院",
+    "category": "私房菜·文艺",
+    "address": "越城区西小路",
+    "avg_price": "80-120元",
+    "signature_dishes": [
+      "花雕鸡",
+      "酱鸭舌",
+      "梅干菜河鳗",
+      "绍三鲜"
+    ],
+    "description": "隐藏在巷弄里的文艺私房菜馆，小院环境雅致。需提前预约，菜品精致有创意。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "兰亭记",
+    "category": "绍兴菜·文化",
+    "address": "柯桥区兰亭景区附近",
+    "avg_price": "60-90元",
+    "signature_dishes": [
+      "兰亭醉鸡",
+      "书法豆腐",
+      "曲水流觞宴"
+    ],
+    "description": "兰亭景区旁的书法主题餐厅，每道菜都与书法文化相关。书法豆腐上用墨鱼汁写着'兰亭'二字。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "同心楼",
+    "category": "小吃面点·百年老店",
+    "address": "越城区解放北路430号",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "生煎包",
+      "片儿川",
+      "小馄饨",
+      "虾肉汤包"
+    ],
+    "description": "绍兴百年老店，以面点小吃闻名。生煎包底脆肉鲜汁多，是绍兴人从小吃到大的味道。每天清晨排长队。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "荣禄春",
+    "category": "小吃·老字号",
+    "address": "越城区解放北路",
+    "avg_price": "20-40元",
+    "signature_dishes": [
+      "小笼包",
+      "虾肉馄饨",
+      "蟹粉小笼"
+    ],
+    "description": "始于清同治年间，以绍兴小笼包闻名。皮薄馅大汤汁鲜美，是本地人的心头好。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "仓桥阿丘面馆",
+    "category": "面馆·苍蝇馆子",
+    "address": "越城区仓桥直街",
+    "avg_price": "15-25元",
+    "signature_dishes": [
+      "次坞打面",
+      "片儿川",
+      "三鲜面",
+      "大排面"
+    ],
+    "description": "仓桥直街巷子里的地道面馆。次坞打面是诸暨特色，手工打制面条劲道有嚼劲。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "嵊州小吃（鲁迅故里店）",
+    "category": "小吃·嵊州特色",
+    "address": "越城区鲁迅中路",
+    "avg_price": "15-25元",
+    "signature_dishes": [
+      "嵊州小笼包",
+      "豆腐包",
+      "炒年糕",
+      "榨面"
+    ],
+    "description": "嵊州是浙江小吃之乡。豆腐包用嫩豆腐做馅一咬爆汁。炒年糕不是炒的而是带汤的，是嵊州独有吃法。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "诸暨次坞打面馆",
+    "category": "面馆·诸暨特色",
+    "address": "越城区人民中路",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "次坞打面",
+      "三鲜打面",
+      "大排打面"
+    ],
+    "description": "次坞打面是非遗技艺，用竹杠反复打压面团使其劲道。入口弹牙、汤头鲜美，是诸暨第一面。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "新昌炒年糕店",
+    "category": "小吃·新昌特色",
+    "address": "新昌县城",
+    "avg_price": "12-20元",
+    "signature_dishes": [
+      "新昌炒年糕",
+      "糟肉年糕",
+      "青菜年糕"
+    ],
+    "description": "新昌炒年糕带汤，用冬笋、雪菜、肉丝同炒后加水煮，年糕软糯汤汁鲜美。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "王老汉臭豆腐",
+    "category": "小吃·特产",
+    "address": "越城区鲁迅中路",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "臭豆腐",
+      "萝卜丝饼",
+      "虾饼"
+    ],
+    "description": "绍兴臭豆腐代表摊位，外酥里嫩配上甜酱和辣酱。逛鲁迅故里时必吃的街头美食。",
+    "dish_category": "街头小吃"
+  },
+  {
+    "name": "老台门臭豆腐",
+    "category": "小吃·特产",
+    "address": "越城区书圣故里",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "臭豆腐",
+      "油墩子",
+      "炸年糕"
+    ],
+    "description": "书圣故里附近的老牌臭豆腐摊，据说有30多年历史。臭豆腐外酥里嫩酱料是秘制的。",
+    "dish_category": "街头小吃"
+  },
+  {
+    "name": "高老太奶油小攀",
+    "category": "甜品·老字号",
+    "address": "越城区新建南路",
+    "avg_price": "8-15元",
+    "signature_dishes": [
+      "奶油小攀"
+    ],
+    "description": "奶油小攀是绍兴独有的传统甜品，类似蛋挞但口感更绵密。高老太是公认最正宗的，开了三十多年。",
+    "dish_category": "甜品"
+  },
+  {
+    "name": "绘璟轩·黄酒奶茶",
+    "category": "饮品·网红",
+    "address": "越城区仓桥直街",
+    "avg_price": "20-35元",
+    "signature_dishes": [
+      "黄酒奶茶",
+      "黄酒拿铁",
+      "黄酒冰淇淋"
+    ],
+    "description": "绍兴黄酒新喝法的代表店铺。黄酒+奶茶的跨界组合意外好喝，酒香与奶香融合，是年轻人打卡圣地。",
+    "dish_category": "饮品"
+  },
+  {
+    "name": "黄酒博物馆文创店",
+    "category": "特产购物",
+    "address": "越城区下大路557号",
+    "avg_price": "30-200元",
+    "signature_dishes": [
+      "绍兴黄酒",
+      "黄酒棒冰",
+      "黄酒奶茶",
+      "花雕酒"
+    ],
+    "description": "中国黄酒博物馆附设商店，可品酒购酒。从三年陈到三十年陈应有尽有。",
+    "dish_category": "特产"
+  },
+  {
+    "name": "古越龙山体验馆",
+    "category": "特产购物",
+    "address": "越城区北海街道",
+    "avg_price": "50-500元",
+    "signature_dishes": [
+      "古越龙山黄酒",
+      "定制花雕",
+      "黄酒巧克力"
+    ],
+    "description": "绍兴黄酒龙头企业古越龙山的体验馆。可参观酿酒过程，品尝不同年份黄酒，定制专属花雕酒坛。",
+    "dish_category": "特产"
+  },
+  {
+    "name": "安昌古镇仁昌酱园",
+    "category": "特产·百年酱园",
+    "address": "柯桥区安昌古镇内",
+    "avg_price": "20-50元",
+    "signature_dishes": [
+      "母子酱油",
+      "太油",
+      "酱鸭",
+      "酱肉"
+    ],
+    "description": "创建于清光绪十八年（1892年），至今仍用传统工艺晒制酱油。园区免费参观，可购买手工酱油和酱货。",
+    "dish_category": "特产"
+  },
+  {
+    "name": "安昌古镇陈记扯白糖",
+    "category": "小吃·非遗",
+    "address": "柯桥区安昌古镇老街",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "扯白糖",
+      "姜糖",
+      "花生糖"
+    ],
+    "description": "扯白糖是绍兴非遗技艺。师傅现场拉制，将滚烫糖浆反复拉扯至银白色，切成小块甜而不腻。",
+    "dish_category": "街头小吃"
+  },
+  {
+    "name": "安昌古镇宝麟酒家",
+    "category": "绍兴菜·古镇",
+    "address": "柯桥区安昌古镇老街",
+    "avg_price": "50-80元",
+    "signature_dishes": [
+      "安昌腊肠",
+      "酱鸭",
+      "梅干菜扣肉",
+      "绍三鲜"
+    ],
+    "description": "安昌古镇老街上的人气餐馆，以安昌腊味和本地绍兴菜为主。腊肠蒸饭是招牌。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "柯桥越乡小吃街",
+    "category": "小吃聚集地",
+    "address": "柯桥区万达广场附近",
+    "avg_price": "20-50元",
+    "signature_dishes": [
+      "臭豆腐",
+      "炒年糕",
+      "黄酒棒冰",
+      "萝卜丝饼"
+    ],
+    "description": "柯桥区小吃集中地，各类绍兴特色小吃一应俱全，适合一站式品尝。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "咸亨酒店外卖窗口",
+    "category": "小吃·外卖",
+    "address": "越城区鲁迅中路179号",
+    "avg_price": "10-30元",
+    "signature_dishes": [
+      "茴香豆",
+      "臭豆腐",
+      "黄酒",
+      "糟鸡爪"
+    ],
+    "description": "咸亨酒店隔壁的外卖窗口，价格比堂食便宜。买包茴香豆边走边吃，体验孔乙己的快乐。",
+    "dish_category": "街头小吃"
+  },
+  {
+    "name": "仓桥直街夜市小吃",
+    "category": "夜市",
+    "address": "越城区仓桥直街",
+    "avg_price": "15-40元",
+    "signature_dishes": [
+      "臭豆腐",
+      "萝卜丝饼",
+      "黄酒棒冰",
+      "烤串"
+    ],
+    "description": "仓桥直街夜市汇聚绍兴各类小吃，晚上红灯笼亮起氛围绝佳。适合晚饭后边逛边吃。",
+    "dish_category": "夜市"
+  },
+  {
+    "name": "鲁迅故里小吃街",
+    "category": "小吃聚集地",
+    "address": "越城区鲁迅中路",
+    "avg_price": "15-50元",
+    "signature_dishes": [
+      "臭豆腐",
+      "茴香豆",
+      "黄酒",
+      "奶油小攀"
+    ],
+    "description": "鲁迅故里景区周边小吃街，汇聚绍兴经典小吃。游客最集中的美食区域。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "咸亨酒店(柯岩店)",
+    "category": "绍兴菜·景区分店",
+    "address": "柯桥区柯岩鲁镇景区内",
+    "avg_price": "60-90元",
+    "signature_dishes": [
+      "茴香豆",
+      "黄酒",
+      "梅干菜扣肉"
+    ],
+    "description": "咸亨酒店在柯岩鲁镇景区的分店。鲁镇是根据鲁迅小说复建的水乡小镇，在此用餐别有风味。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "东湖乌篷船码头茶馆",
+    "category": "茶馆·景区",
+    "address": "越城区东湖风景区内",
+    "avg_price": "20-50元",
+    "signature_dishes": [
+      "龙井茶",
+      "桂花糕",
+      "黄酒"
+    ],
+    "description": "东湖景区内的茶馆，可一边品茶一边欣赏东湖山水。桂花糕是季节限定。",
+    "dish_category": "茶馆"
+  },
+  {
+    "name": "沈园茶馆",
+    "category": "茶馆·文化",
+    "address": "越城区沈园景区内",
+    "avg_price": "20-50元",
+    "signature_dishes": [
+      "龙井茶",
+      "藕粉",
+      "桂花糕"
+    ],
+    "description": "沈园内的茶馆，坐在宋代园林中品茶别有意境。可听到不远处越剧堂会的袅袅唱腔。",
+    "dish_category": "茶馆"
+  },
+  {
+    "name": "大禹陵农家乐",
+    "category": "农家菜·景区周边",
+    "address": "越城区大禹陵景区附近",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "土鸡煲",
+      "鉴湖鱼头",
+      "时蔬",
+      "蒸双臭"
+    ],
+    "description": "大禹陵周边的农家乐，以本地土鸡和鉴湖河鲜为主。土鸡煲是每桌必点。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "兰亭农家菜馆",
+    "category": "农家菜·景区周边",
+    "address": "柯桥区兰亭景区附近",
+    "avg_price": "40-60元",
+    "signature_dishes": [
+      "兰亭笋干",
+      "土鸡煲",
+      "时令蔬菜"
+    ],
+    "description": "兰亭景区附近的农家菜，春季笋干最鲜美。环境简朴但食材新鲜地道。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "新昌农家乐",
+    "category": "农家菜·新昌",
+    "address": "新昌县穿岩十九峰附近",
+    "avg_price": "35-60元",
+    "signature_dishes": [
+      "新昌炒年糕",
+      "土鸡煲",
+      "笋干烧肉"
+    ],
+    "description": "穿岩十九峰周边的农家乐。新昌炒年糕是必吃的，配上一碗土鸡汤完美补给登山消耗。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "上虞农家乐",
+    "category": "农家菜·上虞",
+    "address": "上虞区覆卮山附近",
+    "avg_price": "35-60元",
+    "signature_dishes": [
+      "覆卮山土鸡",
+      "梯田时蔬",
+      "野生河鱼"
+    ],
+    "description": "覆卮山周边农家乐。油菜花季时坐在梯田边吃饭景色绝佳。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "绍兴特产·梅干菜",
+    "category": "特产·干货",
+    "address": "各土特产店有售",
+    "avg_price": "15-30元/斤",
+    "signature_dishes": [
+      "梅干菜扣肉",
+      "梅干菜饼"
+    ],
+    "description": "绍兴梅干菜色泽乌黑、香气浓郁。以芥菜腌制晒干而成，是做梅干菜扣肉的必备食材。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·安昌腊肠",
+    "category": "特产·腊味",
+    "address": "柯桥区安昌古镇",
+    "avg_price": "40-60元/斤",
+    "signature_dishes": [
+      "蒸腊肠",
+      "腊肠饭"
+    ],
+    "description": "安昌腊肠选用猪后腿肉灌制，用酱油、黄酒、白糖腌制后风干。蒸熟切片即可食用，香气扑鼻。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·酱鸭",
+    "category": "特产·腊味",
+    "address": "各土特产店有售",
+    "avg_price": "50-80元/只",
+    "signature_dishes": [
+      "酱鸭",
+      "酱鸭舌"
+    ],
+    "description": "绍兴酱鸭用母子酱油腌制后风干，肉质紧实酱香浓郁。是过年必备的年货。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·花雕酒",
+    "category": "特产·酒类",
+    "address": "各酒庄有售",
+    "avg_price": "50-500元/坛",
+    "signature_dishes": [
+      "花雕酒"
+    ],
+    "description": "花雕酒是绍兴黄酒中的精品，酒坛上有精美彩绘。陈年花雕酒色如琥珀，温润醇厚。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·霉苋菜梗",
+    "category": "特产·腌菜",
+    "address": "各菜市场有售",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "蒸双臭",
+      "霉苋菜梗"
+    ],
+    "description": "绍兴三臭之一。苋菜梗发酵后产生特殊风味，爱的人爱死、怕的人怕死。配豆腐同蒸为'蒸双臭'。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·霉千张",
+    "category": "特产·豆制品",
+    "address": "各菜市场有售",
+    "avg_price": "5-10元",
+    "signature_dishes": [
+      "蒸霉千张"
+    ],
+    "description": "绍兴三臭之二。千张（豆腐皮）发酵后产生浓郁风味。蒸后口感绵软，是绍兴人最爱的下饭菜。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·臭豆腐",
+    "category": "特产·豆制品",
+    "address": "街头随处可见",
+    "avg_price": "10-20元/份",
+    "signature_dishes": [
+      "炸臭豆腐"
+    ],
+    "description": "绍兴三臭之三。苋菜梗卤水浸泡豆腐后油炸至金黄。外酥里嫩，蘸甜酱和辣酱吃。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·母子酱油",
+    "category": "特产·调味品",
+    "address": "柯桥区安昌仁昌酱园",
+    "avg_price": "20-50元/瓶",
+    "signature_dishes": [
+      "母子酱油"
+    ],
+    "description": "绍兴独有酱油。以酱油代水酿造而成（'母'酱油酿'子'酱油），色泽深褐味道醇厚。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·糟鸡",
+    "category": "特产·糟货",
+    "address": "各卤味店有售",
+    "avg_price": "30-50元/只",
+    "signature_dishes": [
+      "糟鸡",
+      "糟鸡爪"
+    ],
+    "description": "绍兴糟货代表。鸡肉用酒糟腌制后肉质紧实、酒香浓郁。是绍兴人过年必备冷盘。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·醉蟹",
+    "category": "特产·糟醉",
+    "address": "各餐厅有售",
+    "avg_price": "时价",
+    "signature_dishes": [
+      "花雕醉蟹",
+      "醉蟹"
+    ],
+    "description": "用花雕酒和酱油腌制大闸蟹。蟹黄与酒香融合，是绍兴秋冬季节的极品美味。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·香糕",
+    "category": "特产·糕点",
+    "address": "各糕点店有售",
+    "avg_price": "15-25元/盒",
+    "signature_dishes": [
+      "绍兴香糕",
+      "桂花糕"
+    ],
+    "description": "绍兴传统糕点，以米粉、白糖、桂花为原料烘烤制成。酥脆香甜，是伴手礼佳选。",
+    "dish_category": "糕点"
+  },
+  {
+    "name": "绍兴特产·嵊州榨面",
+    "category": "特产·面食",
+    "address": "嵊州各特产店",
+    "avg_price": "10-20元/袋",
+    "signature_dishes": [
+      "炒榨面",
+      "汤榨面"
+    ],
+    "description": "嵊州传统米面，细如发丝。炒或煮汤皆可，口感爽滑。是嵊州家家户户必备的主食。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴土菜馆",
+    "category": "绍兴菜·本地",
+    "address": "越城区鲁迅中路",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "蒸双臭",
+      "霉苋菜梗",
+      "霉千张"
+    ],
+    "description": "以绍兴三臭闻名的本地菜馆。霉苋菜梗蒸豆腐是招牌。体验地道绍兴味的好去处。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "府山脚下土菜馆",
+    "category": "绍兴菜·农家",
+    "address": "越城区府山公园附近",
+    "avg_price": "35-60元",
+    "signature_dishes": [
+      "清汤越鸡",
+      "雪菜炒笋",
+      "酱爆螺蛳"
+    ],
+    "description": "府山公园旁的本地土菜馆，游客少本地人多。越鸡是绍兴本地鸡种，清汤炖制肉质鲜嫩。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "丁大兴糕点",
+    "category": "糕点·老字号",
+    "address": "越城区解放南路",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "桂花糕",
+      "香糕",
+      "定胜糕"
+    ],
+    "description": "绍兴老字号糕点店，桂花糕和香糕最受欢迎。伴手礼首选。",
+    "dish_category": "糕点"
+  },
+  {
+    "name": "古越龙山酒楼",
+    "category": "绍兴菜·黄酒主题",
+    "address": "越城区北海街道",
+    "avg_price": "80-150元",
+    "signature_dishes": [
+      "花雕醉鸡",
+      "黄酒炖蛋",
+      "酒香肉"
+    ],
+    "description": "古越龙山旗下的黄酒主题餐厅。每道菜都以黄酒入菜，酒香与菜香完美融合。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "银泰城美食广场",
+    "category": "美食广场",
+    "address": "越城区解放南路银泰城",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "各类小吃",
+      "连锁餐饮"
+    ],
+    "description": "绍兴市中心最大的购物中心美食广场，汇集绍兴小吃和全国连锁餐饮品牌。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "世茂美食街",
+    "category": "美食街",
+    "address": "越城区世茂广场",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "绍东家",
+      "日料",
+      "韩式烤肉"
+    ],
+    "description": "绍兴世茂商圈的美食聚集区，从本地绍兴菜到日韩料理应有尽有。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "阿二面馆",
+    "category": "面馆·本地",
+    "address": "越城区人民中路",
+    "avg_price": "12-25元",
+    "signature_dishes": [
+      "片儿川",
+      "大排面",
+      "三鲜面"
+    ],
+    "description": "绍兴本地人爱吃的老面馆。片儿川雪菜笋片肉丝浇头鲜美。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "老绍兴早点铺",
+    "category": "早餐·本地",
+    "address": "越城区解放北路",
+    "avg_price": "5-15元",
+    "signature_dishes": [
+      "咸豆浆",
+      "油条",
+      "粢饭团",
+      "葱油拌面"
+    ],
+    "description": "绍兴传统早餐铺。咸豆浆配油条是正宗绍兴吃法。粢饭团裹油条和榨菜是绍兴人从小吃到大的早餐。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "诸暨蒸菜馆",
+    "category": "地方菜·诸暨",
+    "address": "诸暨市市区",
+    "avg_price": "30-50元",
+    "signature_dishes": [
+      "西施豆腐",
+      "诸暨蒸三鲜",
+      "梅干菜扣肉"
+    ],
+    "description": "诸暨特色蒸菜馆。西施豆腐是诸暨名菜，嫩豆腐配虾仁火腿蒸制鲜香滑嫩。",
+    "dish_category": "地方菜"
+  },
+  {
+    "name": "新昌特色小吃店",
+    "category": "小吃·新昌",
+    "address": "新昌县人民中路",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "新昌炒年糕",
+      "新昌春饼",
+      "米海茶"
+    ],
+    "description": "新昌特色小吃。春饼薄如纸包着豆芽肉丝炸至金黄。米海茶是新昌传统饮品。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "上虞农家大院",
+    "category": "农家菜·上虞",
+    "address": "上虞区市区",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "上虞土鸡煲",
+      "鉴湖鱼头",
+      "时令蔬菜"
+    ],
+    "description": "上虞区知名农家菜馆。土鸡煲用本地散养土鸡慢炖数小时，汤浓味鲜。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "嵊州越乡小吃城",
+    "category": "小吃·嵊州",
+    "address": "嵊州市市区",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "嵊州小笼包",
+      "炒年糕",
+      "榨面",
+      "糯米果"
+    ],
+    "description": "嵊州小吃一站式体验。小笼包皮薄馅大豆腐包一咬爆汁。炒年糕带汤是嵊州独有吃法。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "绍兴特产·笋干菜",
+    "category": "特产·干货",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/斤",
+    "signature_dishes": [
+      "笋干菜烧肉"
+    ],
+    "description": "绍兴笋干菜用春笋和芥菜晒制而成，是做笋干菜烧肉的核心食材。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·醉枣",
+    "category": "特产·糟醉",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/盒",
+    "signature_dishes": [
+      "醉枣"
+    ],
+    "description": "绍兴传统醉货。用黄酒浸泡红枣制成，酒香浓郁甜而不腻。伴手礼佳选。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴土菜馆",
+    "category": "绍兴菜·本地",
+    "address": "越城区鲁迅中路",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "蒸双臭",
+      "霉苋菜梗",
+      "霉千张"
+    ],
+    "description": "以绍兴三臭闻名的本地菜馆。霉苋菜梗蒸豆腐是招牌。体验地道绍兴味的好去处。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "府山脚下土菜馆",
+    "category": "绍兴菜·农家",
+    "address": "越城区府山公园附近",
+    "avg_price": "35-60元",
+    "signature_dishes": [
+      "清汤越鸡",
+      "雪菜炒笋",
+      "酱爆螺蛳"
+    ],
+    "description": "府山公园旁的本地土菜馆，游客少本地人多。越鸡是绍兴本地鸡种，清汤炖制肉质鲜嫩。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "丁大兴糕点",
+    "category": "糕点·老字号",
+    "address": "越城区解放南路",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "桂花糕",
+      "香糕",
+      "定胜糕"
+    ],
+    "description": "绍兴老字号糕点店，桂花糕和香糕最受欢迎。伴手礼首选。",
+    "dish_category": "糕点"
+  },
+  {
+    "name": "古越龙山酒楼",
+    "category": "绍兴菜·黄酒主题",
+    "address": "越城区北海街道",
+    "avg_price": "80-150元",
+    "signature_dishes": [
+      "花雕醉鸡",
+      "黄酒炖蛋",
+      "酒香肉"
+    ],
+    "description": "古越龙山旗下的黄酒主题餐厅。每道菜都以黄酒入菜，酒香与菜香完美融合。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "银泰城美食广场",
+    "category": "美食广场",
+    "address": "越城区解放南路银泰城",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "各类小吃",
+      "连锁餐饮"
+    ],
+    "description": "绍兴市中心最大的购物中心美食广场，汇集绍兴小吃和全国连锁餐饮品牌。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "世茂美食街",
+    "category": "美食街",
+    "address": "越城区世茂广场",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "绍东家",
+      "日料",
+      "韩式烤肉"
+    ],
+    "description": "绍兴世茂商圈的美食聚集区，从本地绍兴菜到日韩料理应有尽有。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "阿二面馆",
+    "category": "面馆·本地",
+    "address": "越城区人民中路",
+    "avg_price": "12-25元",
+    "signature_dishes": [
+      "片儿川",
+      "大排面",
+      "三鲜面"
+    ],
+    "description": "绍兴本地人爱吃的老面馆。片儿川雪菜笋片肉丝浇头鲜美。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "老绍兴早点铺",
+    "category": "早餐·本地",
+    "address": "越城区解放北路",
+    "avg_price": "5-15元",
+    "signature_dishes": [
+      "咸豆浆",
+      "油条",
+      "粢饭团",
+      "葱油拌面"
+    ],
+    "description": "绍兴传统早餐铺。咸豆浆配油条是正宗绍兴吃法。粢饭团裹油条和榨菜是绍兴人从小吃到大的早餐。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "诸暨蒸菜馆",
+    "category": "地方菜·诸暨",
+    "address": "诸暨市市区",
+    "avg_price": "30-50元",
+    "signature_dishes": [
+      "西施豆腐",
+      "诸暨蒸三鲜",
+      "梅干菜扣肉"
+    ],
+    "description": "诸暨特色蒸菜馆。西施豆腐是诸暨名菜，嫩豆腐配虾仁火腿蒸制鲜香滑嫩。",
+    "dish_category": "地方菜"
+  },
+  {
+    "name": "新昌特色小吃店",
+    "category": "小吃·新昌",
+    "address": "新昌县人民中路",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "新昌炒年糕",
+      "新昌春饼",
+      "米海茶"
+    ],
+    "description": "新昌特色小吃。春饼薄如纸包着豆芽肉丝炸至金黄。米海茶是新昌传统饮品。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "上虞农家大院",
+    "category": "农家菜·上虞",
+    "address": "上虞区市区",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "上虞土鸡煲",
+      "鉴湖鱼头",
+      "时令蔬菜"
+    ],
+    "description": "上虞区知名农家菜馆。土鸡煲用本地散养土鸡慢炖数小时，汤浓味鲜。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "嵊州越乡小吃城",
+    "category": "小吃·嵊州",
+    "address": "嵊州市市区",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "嵊州小笼包",
+      "炒年糕",
+      "榨面",
+      "糯米果"
+    ],
+    "description": "嵊州小吃一站式体验。小笼包皮薄馅大豆腐包一咬爆汁。炒年糕带汤是嵊州独有吃法。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "绍兴特产·笋干菜",
+    "category": "特产·干货",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/斤",
+    "signature_dishes": [
+      "笋干菜烧肉"
+    ],
+    "description": "绍兴笋干菜用春笋和芥菜晒制而成，是做笋干菜烧肉的核心食材。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·醉枣",
+    "category": "特产·糟醉",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/盒",
+    "signature_dishes": [
+      "醉枣"
+    ],
+    "description": "绍兴传统醉货。用黄酒浸泡红枣制成，酒香浓郁甜而不腻。伴手礼佳选。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴土菜馆",
+    "category": "绍兴菜·本地",
+    "address": "越城区鲁迅中路",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "蒸双臭",
+      "霉苋菜梗",
+      "霉千张"
+    ],
+    "description": "以绍兴三臭闻名的本地菜馆。霉苋菜梗蒸豆腐是招牌。体验地道绍兴味的好去处。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "府山脚下土菜馆",
+    "category": "绍兴菜·农家",
+    "address": "越城区府山公园附近",
+    "avg_price": "35-60元",
+    "signature_dishes": [
+      "清汤越鸡",
+      "雪菜炒笋",
+      "酱爆螺蛳"
+    ],
+    "description": "府山公园旁的本地土菜馆，游客少本地人多。越鸡是绍兴本地鸡种，清汤炖制肉质鲜嫩。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "丁大兴糕点",
+    "category": "糕点·老字号",
+    "address": "越城区解放南路",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "桂花糕",
+      "香糕",
+      "定胜糕"
+    ],
+    "description": "绍兴老字号糕点店，桂花糕和香糕最受欢迎。伴手礼首选。",
+    "dish_category": "糕点"
+  },
+  {
+    "name": "古越龙山酒楼",
+    "category": "绍兴菜·黄酒主题",
+    "address": "越城区北海街道",
+    "avg_price": "80-150元",
+    "signature_dishes": [
+      "花雕醉鸡",
+      "黄酒炖蛋",
+      "酒香肉"
+    ],
+    "description": "古越龙山旗下的黄酒主题餐厅。每道菜都以黄酒入菜，酒香与菜香完美融合。",
+    "dish_category": "绍兴菜"
+  },
+  {
+    "name": "银泰城美食广场",
+    "category": "美食广场",
+    "address": "越城区解放南路银泰城",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "各类小吃",
+      "连锁餐饮"
+    ],
+    "description": "绍兴市中心最大的购物中心美食广场，汇集绍兴小吃和全国连锁餐饮品牌。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "世茂美食街",
+    "category": "美食街",
+    "address": "越城区世茂广场",
+    "avg_price": "30-80元",
+    "signature_dishes": [
+      "绍东家",
+      "日料",
+      "韩式烤肉"
+    ],
+    "description": "绍兴世茂商圈的美食聚集区，从本地绍兴菜到日韩料理应有尽有。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "阿二面馆",
+    "category": "面馆·本地",
+    "address": "越城区人民中路",
+    "avg_price": "12-25元",
+    "signature_dishes": [
+      "片儿川",
+      "大排面",
+      "三鲜面"
+    ],
+    "description": "绍兴本地人爱吃的老面馆。片儿川雪菜笋片肉丝浇头鲜美。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "老绍兴早点铺",
+    "category": "早餐·本地",
+    "address": "越城区解放北路",
+    "avg_price": "5-15元",
+    "signature_dishes": [
+      "咸豆浆",
+      "油条",
+      "粢饭团",
+      "葱油拌面"
+    ],
+    "description": "绍兴传统早餐铺。咸豆浆配油条是正宗绍兴吃法。粢饭团裹油条和榨菜是绍兴人从小吃到大的早餐。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "诸暨蒸菜馆",
+    "category": "地方菜·诸暨",
+    "address": "诸暨市市区",
+    "avg_price": "30-50元",
+    "signature_dishes": [
+      "西施豆腐",
+      "诸暨蒸三鲜",
+      "梅干菜扣肉"
+    ],
+    "description": "诸暨特色蒸菜馆。西施豆腐是诸暨名菜，嫩豆腐配虾仁火腿蒸制鲜香滑嫩。",
+    "dish_category": "地方菜"
+  },
+  {
+    "name": "新昌特色小吃店",
+    "category": "小吃·新昌",
+    "address": "新昌县人民中路",
+    "avg_price": "10-20元",
+    "signature_dishes": [
+      "新昌炒年糕",
+      "新昌春饼",
+      "米海茶"
+    ],
+    "description": "新昌特色小吃。春饼薄如纸包着豆芽肉丝炸至金黄。米海茶是新昌传统饮品。",
+    "dish_category": "面点小吃"
+  },
+  {
+    "name": "上虞农家大院",
+    "category": "农家菜·上虞",
+    "address": "上虞区市区",
+    "avg_price": "40-70元",
+    "signature_dishes": [
+      "上虞土鸡煲",
+      "鉴湖鱼头",
+      "时令蔬菜"
+    ],
+    "description": "上虞区知名农家菜馆。土鸡煲用本地散养土鸡慢炖数小时，汤浓味鲜。",
+    "dish_category": "农家菜"
+  },
+  {
+    "name": "嵊州越乡小吃城",
+    "category": "小吃·嵊州",
+    "address": "嵊州市市区",
+    "avg_price": "15-30元",
+    "signature_dishes": [
+      "嵊州小笼包",
+      "炒年糕",
+      "榨面",
+      "糯米果"
+    ],
+    "description": "嵊州小吃一站式体验。小笼包皮薄馅大豆腐包一咬爆汁。炒年糕带汤是嵊州独有吃法。",
+    "dish_category": "小吃集合"
+  },
+  {
+    "name": "绍兴特产·笋干菜",
+    "category": "特产·干货",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/斤",
+    "signature_dishes": [
+      "笋干菜烧肉"
+    ],
+    "description": "绍兴笋干菜用春笋和芥菜晒制而成，是做笋干菜烧肉的核心食材。",
+    "dish_category": "土特产"
+  },
+  {
+    "name": "绍兴特产·醉枣",
+    "category": "特产·糟醉",
+    "address": "各土特产店有售",
+    "avg_price": "20-40元/盒",
+    "signature_dishes": [
+      "醉枣"
+    ],
+    "description": "绍兴传统醉货。用黄酒浸泡红枣制成，酒香浓郁甜而不腻。伴手礼佳选。",
+    "dish_category": "土特产"
+  }
+]

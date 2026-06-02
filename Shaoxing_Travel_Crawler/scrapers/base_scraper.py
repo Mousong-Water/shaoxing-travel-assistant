@@ -77,7 +77,7 @@ class BaseScraper(ABC):
 
     子类可选覆盖:
         _before_run()                    # 运行前钩子 (如获取Cookie)
-        _save_csv(results)
+        run_dynamic() → List[Dict]       # 动态抓取 (预留接口, 默认降级为静态)
     """
 
     def __init__(
@@ -90,6 +90,7 @@ class BaseScraper(ABC):
         delay_max: float = 4.0,
         output_dir: Path = None,
         platform_name: str = '',
+        source_mode: str = 'static',  # 'static' | 'dynamic' | 'auto'
     ):
         """
         Args:
@@ -101,6 +102,10 @@ class BaseScraper(ABC):
             delay_max: 请求最大间隔(秒)
             output_dir: CSV输出目录
             platform_name: 来源平台标识 (如 'ctrip')
+            source_mode: 数据来源模式
+                'static'  — 仅使用静态预置数据
+                'dynamic' — 尝试实时抓取 (需网络可达)
+                'auto'    — 动态优先, 失败降级为静态
         """
         self.city_name = city_name
         self.list_url = list_url
@@ -110,6 +115,7 @@ class BaseScraper(ABC):
         self.delay_max = delay_max
         self.output_dir = output_dir or Path('.')
         self.platform_name = platform_name
+        self.source_mode = source_mode
 
     # ---- 子类必须实现 ----
 

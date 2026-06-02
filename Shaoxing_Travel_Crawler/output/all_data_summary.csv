@@ -1,35 +1,67 @@
-﻿信任等级,内容,内容分类,内容摘要,名称,地址,店名,开放时间,推荐,推荐游览顺序,推荐路线,数据分类,数据来源,时间,景点,来源,来源数量,来源详情,标题,游玩建议,游玩时长,特色,简介,类型,线路名,耗时,评分,贴士,门票价格
-4,,attraction_basic,,鲁迅故里,,,08:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,绍兴最具代表性的人文景点，包含鲁迅祖居、三味书屋、百草园,,,,,,免费
-4,,attraction_basic,,沈园,,,08:00-21:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,南宋著名园林，因陆游与唐婉的爱情故事而闻名,,,,,,40元
-4,,attraction_basic,,东湖,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,古代采石场遗址，以悬崖峭壁和深潭碧水闻名,,,,,,50元
-4,,attraction_basic,,兰亭景区,,,08:00-17:20,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,因王羲之《兰亭序》闻名天下，书法圣地,,,,,,70元
-4,,attraction_basic,,柯岩风景区,,,08:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,包含柯岩、鉴湖、鲁镇三大景区,,,,,,115元
-4,,attraction_basic,,安昌古镇,,,全天开放,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,绍兴保存最完好的水乡古镇之一，以酱文化和腊味闻名,,,,,,免费
-4,,attraction_basic,,大禹陵,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,中华民族始祖大禹的陵寝之地,,,,,,50元
-4,,attraction_basic,,新昌大佛寺,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,江南第一大佛，始凿于南朝齐梁年间,,,,,,60元
-4,,attraction_basic,,五泄风景区,,,07:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,以五级瀑布闻名，东南第一秀水,,,,,,80元
-4,,attraction_basic,,穿岩十九峰,,,08:00-16:30,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,丹霞地貌，19座山峰一字排列，有玻璃栈道,,,,,,60元
-2,,attraction_culture,,周恩来祖居,,,,,,,attraction_culture,baike,,,,1,{'baike': 1},,,,,周恩来祖居位于浙江省绍兴市越城区劳动路369号，为省级文物保护单位 [3-5]。建筑始建于明代，占地面积2150平方米，建筑面积1680平方米，采用三进台门式布局，现存门斗、大厅、座楼及四个天井，以黑色竹丝台门为特色 [2-4]。祖居原名锡养堂，清康熙三十七年（1698年）因周懋章妻王氏百岁获赐匾额改称百岁堂。1939年3月周恩来以国民政府军事委员会政治部副部长身份在此开展抗日活动，续填周氏宗谱并题词 [3-5]。1956年台风损毁部分建筑后改建平房，1980年代按原貌修复座楼并恢复百岁堂名称，门楣匾额由陈云题写。1997年被列为浙江省文物保护单位，1998年扩建广场并树立周恩来铜像 [3] [5] [7]。现设有周恩来史迹陈列室，展示其生前用品、周氏家谱及历史资料 [2] [6]，作为爱国主义教育基地对外开放 [5]。,,,,,,
-2,,food_shop,,,越城区鲁迅中路179号,咸亨酒店,,茴香豆、绍兴黄酒、梅干菜扣肉,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,因鲁迅小说《孔乙己》闻名，绍兴老字号,绍兴菜,,,,,
-2,,food_shop,,,鲁迅故里景区内,咸亨酒店(中餐厅),,醉鸡、臭豆腐、酱鸭,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,景区内分店，适合游客体验,绍兴菜,,,,,
-2,,food_shop,,,越城区解放北路430号,同心楼,,生煎包、片儿川,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,绍兴百年老店，以面点小吃闻名,小吃面点,,,,,
-2,,food_shop,,,越城区仓桥直街114号,寻宝记绍兴菜,,醉蟹、梅干菜扣肉、宋嫂鱼羹,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,仓桥直街上的网红绍兴菜馆,绍兴菜,,,,,
-2,,food_shop,,,越城区鲁迅中路273号,孔乙己酒家,,茴香豆、花雕鸡、绍兴三臭,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,鲁迅主题绍兴菜馆，文化氛围浓厚,绍兴菜,,,,,
-2,,food_shop,,,越城区胜利西路,状元楼,,清汤越鸡、干菜焖肉,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,绍兴老牌酒楼，以传统绍兴菜见长,绍兴菜,,,,,
-2,,food_shop,,,越城区仓桥直街,仓桥阿丘面馆,,次坞打面、片儿川,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,仓桥直街巷子里的地道面馆,面馆,,,,,
-2,,food_shop,,,越城区下大路557号,黄酒博物馆文创店,,各种年份黄酒、黄酒棒冰、黄酒奶茶,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,黄酒博物馆附设商店，可品酒购酒,特产购物,,,,,
-2,,attraction_review,,,,,,,鲁迅祖居→三味书屋→百草园→鲁迅纪念馆,,attraction_review,mafengwo,,鲁迅故里,mafengwo_guide,1,{'mafengwo': 1},,建议上午9点前到达避开人流高峰,,,,,,2-3小时,,百草园免费，三味书屋可体验私塾课,
-2,,attraction_review,,,,,,,入口→陶公洞→仙桃洞→听湫亭,,attraction_review,mafengwo,,东湖,mafengwo_guide,1,{'mafengwo': 1},,乘乌篷船是精华，建议坐船进、步行出,,,,,,2-3小时,,乌篷船票需另购，节假日排队较长,
-2,,attraction_review,,,,,,,鹅池→流觞亭→御碑亭→王右军祠→书法博物馆,,attraction_review,mafengwo,,兰亭景区,mafengwo_guide,1,{'mafengwo': 1},,春季最佳，竹林新绿、曲水流觞,,,,,,2-3小时,,农历三月三书法节期间有现场挥毫活动,
-2,,attraction_review,,,,,,,古镇入口→仁昌酱园→老街→沿河漫步,,attraction_review,mafengwo,,安昌古镇,mafengwo_guide,1,{'mafengwo': 1},,腊月最佳，可体验传统年味,,,,,,2-3小时,,腊味、扯白糖是必买特产，酱园可免费参观,
-2,,travel_route,,,,,,,,D1鲁迅故里+沈园 / D2柯岩+安昌古镇 / D3兰亭+东湖,travel_route,mafengwo,,绍兴整体,mafengwo_guide,1,{'mafengwo': 2},,2-3日游最适宜，春秋季节最佳,,,,,,,,可购买绍兴旅游联票(含多个景点)更划算,
-4,,travel_route,,,,,,,,,travel_route,wenglv,,鲁迅故里→沈园→书圣故里→仓桥直街,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,深度体验绍兴人文历史,,,绍兴古城文化一日游,,,,
-4,,travel_route,,,,,,,,,travel_route,wenglv,,D1:柯岩+鉴湖+鲁镇 / D2:安昌古镇+东湖,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,水乡风情与自然山水结合,,,绍兴水乡古镇二日游,,,,
-4,,travel_route,,,,,,,,,travel_route,wenglv,,兰亭景区→书圣故里→青藤书屋→绍兴博物馆,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,追寻王羲之徐渭书法足迹,,,绍兴书法朝圣之旅,,,,
-2,第40届兰亭书法节将于2026年农历三月初三在兰亭景区举行，届时将举办书法展览、曲水流觞等活动。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,sxnews_static,1,{'local_news': 1},2026绍兴兰亭书法节即将举办,,,,,,,,,,
-2,2026年安昌腊月风情节期间，安昌古镇接待游客超50万人次，创历史新高。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,sxnews_static,1,{'local_news': 1},安昌古镇腊月风情节吸引游客超50万人次,,,,,,,,,,
-1,,seasonal_event,宛委山樱花、吼山桃花、镜湖湿地油菜花、兰亭竹林,,,,,,,,seasonal_event,weixin,每年3-4月,,,1,{'weixin': 1},绍兴春季赏花指南,,,,,,,,,,
-1,,seasonal_event,大香林桂花、会稽山红叶、鉴湖桂花节、天姥山秋色,,,,,,,,seasonal_event,weixin,每年10-11月,,,1,{'weixin': 1},绍兴秋季最佳旅游时间,,,,,,,,,,
-1,,seasonal_event,安昌古镇腊味飘香、传统年俗体验、酱园开缸,,,,,,,,seasonal_event,weixin,每年腊月(12月-1月),,,1,{'weixin': 1},绍兴年味·安昌腊月风情节,,,,,,,,,,
-3,绍兴市2025年新增3家国家4A级旅游景区，进一步丰富了绍兴旅游资源。,official_notice,,,,,,,,,official_notice,local_news,,,sxnews_static,1,{'local_news': 1},绍兴新增3家4A级景区,,,,,,,,,,
-1,,local_food,臭豆腐、梅干菜扣肉、茴香豆、绍兴黄酒、醉鸡、酱鸭、霉苋菜梗、糟鸡、奶油小攀、次坞打面,,,,,,,,local_food,weixin,,,,1,{'weixin': 1},绍兴必吃十大美食,,,,,,,,,,
+﻿人均,信任等级,内容,内容分类,内容摘要,名称,地址,店名,开放时间,推荐,推荐游览顺序,推荐路线,数据分类,数据来源,时间,景点,最佳季节,来源,来源URL,来源数量,来源详情,标题,游玩建议,游玩时长,特色,简介,简介_可信度,简介_备选值,类型,线路名,耗时,评分,贴士,门票价格
+,4,,attraction_basic|attraction_culture,,鲁迅故里,,,08:30-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,绍兴最具代表性的人文景点，包含鲁迅祖居、三味书屋、百草园,有冲突,['建造年代: 清代建筑，保存至今已200余年 | 文化典故: 《从百草园到三味书屋》《故乡》《社戏》等名篇均以此为背景创作 | 建筑特色: 典型的绍兴台门建筑，坐北朝南，粉墙黛瓦'],,,,,,免费
+,4,,attraction_basic|attraction_culture,,沈园,,,08:00-21:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,南宋著名园林，因陆游与唐婉的爱情故事而闻名,有冲突,"[""建造年代: 南宋（约公元1151年前） | 文化典故: 陆游《钗头凤》:'红酥手，黄縢酒，满城春色宫墙柳'；唐婉和词:'世情薄，人情恶，雨送黄昏花易落' | 建筑特色: 宋代园林风格，葫芦池、孤鹤轩、六朝井亭，夜间有《沈园之夜》堂会演出""]",,,,,,40元
+,4,,attraction_basic|attraction_culture,,东湖,,,08:00-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,古代采石场遗址，以悬崖峭壁和深潭碧水闻名,有冲突,"[""建造年代: 汉代始采石，清末（1899年）建为园林 | 文化典故: 陶公洞、仙桃洞为采石遗迹；郭沫若曾题诗:'箬篑东湖，凿自人工。壁立千尺，路隘难通' | 建筑特色: 峭壁奇洞与江南水乡结合，乌篷船穿行于水洞之间""]",,,,,,50元
+,4,,attraction_basic|attraction_culture,,兰亭景区,,,08:00-17:20,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,因王羲之《兰亭序》闻名天下，书法圣地,有冲突,"[""建造年代: 始于汉代，盛于东晋，现存建筑多为明清重修 | 文化典故: 王羲之《兰亭序》:'永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭'；鹅池碑传为王羲之、王献之父子合书 | 建筑特色: 江南园林与书法文化融合，鹅池、流觞亭、御碑亭(康熙乾隆祖孙碑)、王右军祠""]",,,,,,70元
+,4,,attraction_basic|attraction_culture,,柯岩风景区,,,08:30-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,包含柯岩、鉴湖、鲁镇三大景区,有冲突,"[""建造年代: 汉代始采石，隋唐造像，鉴湖建于东汉（公元140年） | 文化典故: 柯岩大佛为隋代石刻；'云骨'巨石被誉为'天下第一石'；鉴湖为绍兴黄酒水源 | 建筑特色: 石窟造像、江南水乡与鲁迅笔下小镇的融合""]",,,,,,115元
+,4,,attraction_basic|attraction_culture,,安昌古镇,,,全天开放,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,绍兴保存最完好的水乡古镇之一，以酱文化和腊味闻名,有冲突,"[""建造年代: 北宋，现存建筑多为明清 | 文化典故: 绍兴师爷的故乡，'无绍不成衙'之说源于此；仁昌酱园创建于清光绪十八年（1892年） | 建筑特色: 一河两街，翻轩骑楼，拱桥石梁，原生态水乡风貌""]",,,,,,免费
+,4,,attraction_basic|attraction_culture,,大禹陵,,,08:00-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,中华民族始祖大禹的陵寝之地,有冲突,['建造年代: 始建于梁大同十一年（公元545年），历代重修 | 文化典故: 大禹治水三过家门而不入；每年清明节举行公祭大禹陵典礼 | 建筑特色: 禹陵、禹庙、禹祠三部分，依山而建，气势恢宏'],,,,,,50元
+,4,,attraction_basic|attraction_culture,,新昌大佛寺,,,08:00-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,江南第一大佛，始凿于南朝齐梁年间,有冲突,"[""建造年代: 南朝（486-516年） | 文化典故: 石弥勒像高16.3米，为中国南方早期石窟代表作，被誉为'江南第一大佛' | 建筑特色: 依山凿刻，石窟造像与寺庙建筑结合""]",,,,,,60元
+,4,,attraction_basic|attraction_culture,,五泄风景区,,,07:30-17:00,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,以五级瀑布闻名，东南第一秀水,有冲突,"[""建造年代: 自然形成，唐宋时期即为游览胜地 | 文化典故: 被誉为'东南第一秀水'；历代文人墨客多有题咏 | 建筑特色: 五泄瀑布群（第五泄至第一泄）加五泄湖，山水奇秀""]",,,,,,80元
+,4,,attraction_basic|attraction_culture,,穿岩十九峰,,,08:00-16:30,,,,attraction_basic,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,丹霞地貌，19座山峰一字排列，有玻璃栈道,有冲突,['建造年代: 自然形成 | 文化典故: 因19座山峰一字排列得名；千丈幽谷为《笑傲江湖》等多部影视剧取景地 | 建筑特色: 丹霞地貌，悬空玻璃栈道，千丈幽谷'],,,,,,60元
+,4,,attraction_basic|attraction_culture,,鲁迅故里,,,08:30-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,绍兴最具代表性的人文景点，包含鲁迅祖居、三味书屋、百草园,有冲突,['建造年代: 清代建筑，保存至今已200余年 | 文化典故: 《从百草园到三味书屋》《故乡》《社戏》等名篇均以此为背景创作 | 建筑特色: 典型的绍兴台门建筑，坐北朝南，粉墙黛瓦'],,,,,,免费
+,4,,attraction_basic|attraction_culture,,沈园,,,08:00-21:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,南宋著名园林，因陆游与唐婉的爱情故事而闻名,有冲突,"[""建造年代: 南宋（约公元1151年前） | 文化典故: 陆游《钗头凤》:'红酥手，黄縢酒，满城春色宫墙柳'；唐婉和词:'世情薄，人情恶，雨送黄昏花易落' | 建筑特色: 宋代园林风格，葫芦池、孤鹤轩、六朝井亭，夜间有《沈园之夜》堂会演出""]",,,,,,40元
+,4,,attraction_basic|attraction_culture,,东湖,,,08:00-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,古代采石场遗址，以悬崖峭壁和深潭碧水闻名,有冲突,"[""建造年代: 汉代始采石，清末（1899年）建为园林 | 文化典故: 陶公洞、仙桃洞为采石遗迹；郭沫若曾题诗:'箬篑东湖，凿自人工。壁立千尺，路隘难通' | 建筑特色: 峭壁奇洞与江南水乡结合，乌篷船穿行于水洞之间""]",,,,,,50元
+,4,,attraction_basic|attraction_culture,,兰亭景区,,,08:00-17:20,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,因王羲之《兰亭序》闻名天下，书法圣地,有冲突,"[""建造年代: 始于汉代，盛于东晋，现存建筑多为明清重修 | 文化典故: 王羲之《兰亭序》:'永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭'；鹅池碑传为王羲之、王献之父子合书 | 建筑特色: 江南园林与书法文化融合，鹅池、流觞亭、御碑亭(康熙乾隆祖孙碑)、王右军祠""]",,,,,,70元
+,4,,attraction_basic|attraction_culture,,柯岩风景区,,,08:30-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,包含柯岩、鉴湖、鲁镇三大景区,有冲突,"[""建造年代: 汉代始采石，隋唐造像，鉴湖建于东汉（公元140年） | 文化典故: 柯岩大佛为隋代石刻；'云骨'巨石被誉为'天下第一石'；鉴湖为绍兴黄酒水源 | 建筑特色: 石窟造像、江南水乡与鲁迅笔下小镇的融合""]",,,,,,115元
+,4,,attraction_basic|attraction_culture,,安昌古镇,,,全天开放,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,绍兴保存最完好的水乡古镇之一，以酱文化和腊味闻名,有冲突,"[""建造年代: 北宋，现存建筑多为明清 | 文化典故: 绍兴师爷的故乡，'无绍不成衙'之说源于此；仁昌酱园创建于清光绪十八年（1892年） | 建筑特色: 一河两街，翻轩骑楼，拱桥石梁，原生态水乡风貌""]",,,,,,免费
+,4,,attraction_basic|attraction_culture,,大禹陵,,,08:00-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,中华民族始祖大禹的陵寝之地,有冲突,['建造年代: 始建于梁大同十一年（公元545年），历代重修 | 文化典故: 大禹治水三过家门而不入；每年清明节举行公祭大禹陵典礼 | 建筑特色: 禹陵、禹庙、禹祠三部分，依山而建，气势恢宏'],,,,,,50元
+,4,,attraction_basic|attraction_culture,,新昌大佛寺,,,08:00-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,江南第一大佛，始凿于南朝齐梁年间,有冲突,"[""建造年代: 南朝（486-516年） | 文化典故: 石弥勒像高16.3米，为中国南方早期石窟代表作，被誉为'江南第一大佛' | 建筑特色: 依山凿刻，石窟造像与寺庙建筑结合""]",,,,,,60元
+,4,,attraction_basic|attraction_culture,,五泄风景区,,,07:30-17:00,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,以五级瀑布闻名，东南第一秀水,有冲突,"[""建造年代: 自然形成，唐宋时期即为游览胜地 | 文化典故: 被誉为'东南第一秀水'；历代文人墨客多有题咏 | 建筑特色: 五泄瀑布群（第五泄至第一泄）加五泄湖，山水奇秀""]",,,,,,80元
+,4,,attraction_basic|attraction_culture,,穿岩十九峰,,,08:00-16:30,,,,attraction_culture,gov_api|baike,,,,,,2,"{'gov_api': 1, 'baike': 1}",,,,,丹霞地貌，19座山峰一字排列，有玻璃栈道,有冲突,['建造年代: 自然形成 | 文化典故: 因19座山峰一字排列得名；千丈幽谷为《笑傲江湖》等多部影视剧取景地 | 建筑特色: 丹霞地貌，悬空玻璃栈道，千丈幽谷'],,,,,,60元
+,2,,attraction_culture,,书圣故里,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 东晋，现存街区为明清风格 | 文化典故: 题扇桥：王羲之为卖扇老妪题字，扇子身价百倍；躲婆弄：老妪再三求字，王羲之躲入小巷 | 建筑特色: 绍兴保存最完整的历史街区，蕺山街、西街、笔飞弄,,,,,,,,
+,2,,attraction_culture,,仓桥直街,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 宋代始建，明清繁华 | 文化典故: 获联合国教科文组织亚太区文化遗产保护奖（2003年） | 建筑特色: 台门建筑群，沿河而建，传统店铺与民居交错,,,,,,,,
+,2,,attraction_culture,,西施故里,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 现存建筑重修于1980-1990年代 | 文化典故: 西施浣纱、卧薪尝胆等历史典故；浣纱石留有东晋王羲之题字 | 建筑特色: 西施殿利用万余件古建筑构件重建，江南园林风格,,,,,,,,
+,2,,attraction_culture,,覆卮山,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 自然形成，千年梯田始于宋代 | 文化典故: 谢灵运覆卮典故；冰川石浪为第四纪冰川遗迹 | 建筑特色: 千年古梯田（2.3万块）、冰川石浪、古村落,,,,,,,,
+,2,,attraction_culture,,天姥山,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 自然形成 | 文化典故: 浙东唐诗之路的核心节点，450余位唐代诗人留下1500余首诗篇 | 建筑特色: 山间云雾缭绕，天姥寺遗址，登山步道,,,,,,,,
+,2,,attraction_culture,,曹娥庙,,,,,,,attraction_culture,baike,,,,,,1,{'baike': 1},,,,,建造年代: 东汉，现存建筑为民国重建 | 文化典故: 被誉为'江南第一庙'，庙内有历代碑刻数十通，包括蔡卞重书的曹娥碑 | 建筑特色: 庙殿巍峨，雕刻精美，正殿壁画描绘曹娥事迹,,,,,,,,
+80-120元,2,,food_shop,,,越城区鲁迅中路179号,咸亨酒店,,茴香豆、绍兴黄酒、梅干菜扣肉、糟鸡,,,food_shop,dianping,,,,dianping_static,dianping_static:xianheng,1,{'dianping': 1},,,,,创建于清光绪二十年（1894年），因鲁迅小说《孔乙己》闻名天下。店内有'孔乙己欠十九文钱'的趣味招牌，是来绍兴必打卡的文化餐厅。,,,绍兴菜·老字号,,,,,
+70-100元,2,,food_shop,,,越城区仓桥直街114号,寻宝记绍兴菜,,醉蟹、梅干菜扣肉、宋嫂鱼羹、绍兴三臭,,,food_shop,dianping,,,,dianping_static,dianping_static:xunbaoji,1,{'dianping': 1},,,,,位于仓桥直街核心位置，以新派绍兴菜见长。装修古色古香，将传统绍兴菜与现代口味结合，常年排队。,,,绍兴菜·网红,,,,,
+60-90元,2,,food_shop,,,越城区胜利西路,状元楼,,清汤越鸡、干菜焖肉、鉴湖鱼头,,,food_shop,dianping,,,,dianping_static,dianping_static:zhuangyuanlou,1,{'dianping': 1},,,,,绍兴老牌酒楼，以传统绍兴菜见长。清汤越鸡选用本地越鸡，汤清味醇，是绍兴十大名菜之一。,,,绍兴菜·老牌,,,,,
+70-100元,2,,food_shop,,,越城区鲁迅中路273号,孔乙己酒家,,茴香豆、花雕鸡、绍兴三臭、臭豆腐,,,food_shop,dianping,,,,dianping_static,dianping_static:kongyiji,1,{'dianping': 1},,,,,鲁迅主题绍兴菜馆，店内随处可见《孔乙己》元素。'多乎哉？不多也'的茴香豆是每桌必点。,,,绍兴菜·主题餐厅,,,,,
+150-250元,2,,food_shop,,,越城区环山路8号,绍兴饭店,,鉴湖河鲜、花雕醉蟹、干菜焖肉,,,food_shop,dianping,,,,dianping_static,dianping_static:shaoxinghotel,1,{'dianping': 1},,,,,绍兴最老牌的高端酒店，位于府山脚下，园林式建筑。接待过众多中外政要，是体验正宗绍兴官府菜的首选。,,,绍兴菜·高端,,,,,
+15-30元,2,,food_shop,,,越城区解放北路430号,同心楼,,生煎包、片儿川、小馄饨,,,food_shop,dianping,,,,dianping_static,dianping_static:tongxinlou,1,{'dianping': 1},,,,,绍兴百年老店，以面点小吃闻名。生煎包底脆肉鲜，是绍兴人从小吃到大的味道。每天清晨排长队。,,,小吃面点·百年老店,,,,,
+15-25元,2,,food_shop,,,越城区仓桥直街,仓桥阿丘面馆,,次坞打面、片儿川、三鲜面,,,food_shop,dianping,,,,dianping_static,dianping_static:cangqiaoamian,1,{'dianping': 1},,,,,仓桥直街巷子里的地道面馆。次坞打面是诸暨特色，手工打制，面条劲道有嚼劲。,,,面馆·苍蝇馆子,,,,,
+20-40元,2,,food_shop,,,越城区解放北路,荣禄春,,小笼包、虾肉馄饨、蟹粉小笼,,,food_shop,dianping,,,,dianping_static,dianping_static:rongluchun,1,{'dianping': 1},,,,,始于清同治年间，以绍兴小笼包闻名。皮薄馅大，汤汁鲜美，是本地人的心头好。,,,小吃·老字号,,,,,
+15-25元,2,,food_shop,,,越城区鲁迅中路鲁迅故里景区附近,嵊州小吃（鲁迅故里店）,,嵊州小笼包（豆腐包）、炒年糕、榨面,,,food_shop,dianping,,,,dianping_static,dianping_static:shengzhouxiaochi,1,{'dianping': 1},,,,,嵊州是浙江小吃之乡。豆腐包用嫩豆腐做馅，一咬爆汁。炒年糕不是炒的而是带汤的，是嵊州独有吃法。,,,小吃·嵊州特色,,,,,
+10-20元,2,,food_shop,,,越城区鲁迅中路,王老汉臭豆腐,,臭豆腐、萝卜丝饼、虾饼,,,food_shop,dianping,,,,dianping_static,dianping_static:wanglaohan,1,{'dianping': 1},,,,,绍兴臭豆腐的代表摊位，外酥里嫩，配上甜酱和辣酱，是逛鲁迅故里时必吃的街头美食。,,,小吃·特产,,,,,
+8-15元,2,,food_shop,,,越城区新建南路,高老太奶油小攀,,奶油小攀（绍兴版蛋挞）,,,food_shop,dianping,,,,dianping_static,dianping_static:gaolao,1,{'dianping': 1},,,,,奶油小攀是绍兴独有的传统甜品，类似蛋挞但口感更绵密。高老太是公认最正宗的，开了三十多年。,,,甜品·老字号,,,,,
+30-200元,2,,food_shop,,,越城区下大路557号,黄酒博物馆文创店,,各种年份黄酒、黄酒棒冰、黄酒奶茶,,,food_shop,dianping,,,,dianping_static,dianping_static:huangjiumuseum,1,{'dianping': 1},,,,,中国黄酒博物馆附设商店，可品酒购酒。从三年陈到三十年陈应有尽有，还有黄酒棒冰、黄酒奶茶等文创产品。,,,特产购物,,,,,
+20-35元,2,,food_shop,,,越城区仓桥直街,绘璟轩·黄酒奶茶,,黄酒奶茶、黄酒拿铁、黄酒冰淇淋,,,food_shop,dianping,,,,dianping_static,dianping_static:huijingxuan,1,{'dianping': 1},,,,,绍兴黄酒新喝法的代表店铺。黄酒+奶茶的跨界组合意外好喝，酒香与奶香融合，是年轻人的打卡圣地。,,,饮品·网红,,,,,
+80-120元,2,,food_shop,,,越城区西小路,柒舍小院,,花雕鸡、酱鸭舌、梅干菜河鳗,,,food_shop,dianping,,,,dianping_static,dianping_static:qishexiaoyuan,1,{'dianping': 1},,,,,隐藏在巷弄里的文艺私房菜馆，小院环境雅致。需提前预约，菜品精致有创意。,,,私房菜·文艺,,,,,
+50-80元,2,,food_shop,,,越城区世茂广场,绍东家,,花雕醉鸡、酱鸭、酒酿圆子,,,food_shop,dianping,,,,dianping_static,dianping_static:shaodongjia,1,{'dianping': 1},,,,,绍兴本地连锁品牌，菜品标准化，环境干净现代。适合不习惯苍蝇馆子的游客，味道正宗。,,,绍兴菜·连锁,,,,,
+20-50元,2,,food_shop,,,柯桥区安昌古镇内,安昌古镇仁昌酱园,,母子酱油、太油、酱鸭、酱肉,,,food_shop,dianping,,,,dianping_static,dianping_static:renchang,1,{'dianping': 1},,,,,创建于清光绪十八年（1892年），至今仍用传统工艺晒制酱油。园区免费参观，可购买手工酱油和酱货。,,,特产·百年酱园,,,,,
+10-20元,2,,food_shop,,,柯桥区安昌古镇老街,安昌古镇陈记扯白糖,,扯白糖、姜糖、花生糖,,,food_shop,dianping,,,,dianping_static,dianping_static:chenjitang,1,{'dianping': 1},,,,,扯白糖是绍兴非遗技艺。师傅现场拉制，将滚烫糖浆反复拉扯至银白色，切成小块，甜而不腻。,,,小吃·非遗,,,,,
+20-50元,2,,food_shop,,,柯桥区万达广场附近,柯桥越乡小吃街,,臭豆腐、炒年糕、黄酒棒冰、萝卜丝饼,,,food_shop,dianping,,,,dianping_static,dianping_static:yuexiangstreet,1,{'dianping': 1},,,,,柯桥区小吃集中地，各类绍兴特色小吃一应俱全，适合一站式品尝。,,,小吃聚集地,,,,,
+,2,,attraction_review,,,,,,,鲁迅祖居→三味书屋→百草园→鲁迅纪念馆→鲁迅笔下风情园,,attraction_review,mafengwo,,鲁迅故里,春秋（3-5月、9-11月）,mafengwo_static,mafengwo_static:luxunguli,1,{'mafengwo': 1},,建议上午8:30开门时到达，避开10点后的旅行团高峰,,,,,,,,2-3小时,,免费不免票，需凭身份证领票；三味书屋有'早'字课桌可看；百草园免费开放,
+,2,,attraction_review,,,,,,,断云石→诗境石→孤鹤轩→钗头凤碑→葫芦池→六朝井亭,,attraction_review,mafengwo,,沈园,春秋季，4月樱花季最佳,mafengwo_static,mafengwo_static:shenyuan,1,{'mafengwo': 1},,建议下午3点后入园，白天赏园+傍晚看《沈园之夜》演出,,,,,,,,1.5-2小时（不含演出）,,夜游演出需另购票；钗头凤碑前可挂同心锁；园内有陆游纪念馆,
+,2,,attraction_review,,,,,,,入口码头→陶公洞（船）→仙桃洞（船）→听湫亭→霞川桥→绕门山,,attraction_review,mafengwo,,东湖,春夏（荷花6-7月盛开）、秋季,mafengwo_static,mafengwo_static:donghu,1,{'mafengwo': 1},,必乘乌篷船！建议坐船进（领略水洞奇观）、步行出（欣赏全景）,,,,,,,,2-3小时,,乌篷船票85元/人另购；节假日排队1小时起，建议工作日去；陶公洞内温差约10℃,
+,2,,attraction_review,,,,,,,鹅池碑→流觞亭→御碑亭→王右军祠→临池十八缸→书法博物馆,,attraction_review,mafengwo,,兰亭景区,春季（3-4月书法节）、秋季,mafengwo_static,mafengwo_static:lanting,1,{'mafengwo': 1},,最好的季节是春天，竹林新绿、曲水流觞活动丰富,,,,,,,,2-3小时,,农历三月初三兰亭书法节最为热闹；可体验曲水流觞活动；出口处可购买文房四宝,
+,2,,attraction_review,,,,,,,柯岩入口→大佛→云骨→鉴湖码头→葫芦醉岛→鲁镇→鲁镇演出,,attraction_review,mafengwo,,柯岩风景区,春秋（鉴湖桂花9-10月飘香）,mafengwo_static,mafengwo_static:keyan,1,{'mafengwo': 1},,景区较大，建议安排半天时间。柯岩看石、鉴湖坐船、鲁镇看演出,,,,,,,,3-4小时,,联票115元含三景区；鲁镇有社戏表演；鉴湖古纤道不要错过,
+,2,,attraction_review,,,,,,,古镇入口→仁昌酱园→老街→福安居茶馆→师爷馆→穗康钱庄,,attraction_review,mafengwo,,安昌古镇,冬季（腊月风情节）、秋季,mafengwo_static,mafengwo_static:anchang,1,{'mafengwo': 1},,腊月最佳！腊味挂满屋檐，年味最浓。平时周末去也很悠闲,,,,,,,,2-3小时,,扯白糖现场制作可观看；腊肠/酱鸭是必买特产；无需门票（部分小馆另收费）,
+,2,,attraction_review,,,,,,,题扇桥→躲婆弄→戒珠寺→蕺山街→笔飞弄→王羲之陈列馆,,attraction_review,mafengwo,,书圣故里,四季皆宜,mafengwo_static,mafengwo_static:shushengguli,1,{'mafengwo': 1},,适合慢慢逛，感受老绍兴的烟火气。题扇桥和躲婆弄的故事很有趣,,,,,,,,1-2小时,,免费开放，全天可逛；蕺山街上的老茶馆值得坐坐；可步行至蔡元培故居,
+,2,,attraction_review,,,,,,,城市广场入口→仓桥直街主街→寻宝记/阿丘面馆→河边茶馆,,attraction_review,mafengwo,,仓桥直街,四季皆宜,mafengwo_static,mafengwo_static:cangqiao,1,{'mafengwo': 1},,傍晚时分最美，落日余晖洒在河面上。适合晚饭后闲逛,,,,,,,,1-2小时,,寻宝记常年排队建议提前拿号；街上有多家文艺小店；夜色中的红灯笼很有氛围,
+,2,,attraction_review,,,,,,,,D1:鲁迅故里(上午)→沈园(下午)→仓桥直街(晚上) | D2:东湖(上午)→兰亭(下午)→书圣故里(傍晚),attraction_review,mafengwo,,绍兴2日经典游,,mafengwo_static,mafengwo_static:route2day,1,{'mafengwo': 1},,适合首次来绍兴，覆盖最核心景点，节奏适中,,,,,,,,2天,,D1景点集中在越城区步行可达；D2需乘车，东湖和兰亭相距约15公里,
+,2,,attraction_review,,,,,,,,D1:鲁迅故里→沈园→书圣故里(晚) | D2:柯岩风景区(全天)→仓桥直街(晚) | D3:东湖(上午)→兰亭(下午)→安昌古镇(下午),attraction_review,mafengwo,,绍兴3日深度游,,mafengwo_static,mafengwo_static:route3day,1,{'mafengwo': 1},,涵盖市区精华+柯岩鉴湖+安昌古镇，适合深度体验,,,,,,,,3天,,可购买绍兴旅游联票；D2建议打车往返柯岩；D3东湖早去人少,
+,2,,travel_route,,,,,,,,同心楼(早餐生煎)→鲁迅故里(王老汉臭豆腐)→咸亨酒店(午餐)→高老太奶油小攀(甜品)→寻宝记(晚餐)→绘璟轩(黄酒奶茶收尾),travel_route,mafengwo,,绍兴美食一日游,,mafengwo_static,mafengwo_static:foodroute,1,{'mafengwo': 1},,以吃为主题，串联绍兴最地道的美味,,,,,,,,1天,,少量多餐，每样尝一点；黄酒棒冰随手可买，边走边吃,
+,2,,travel_route,,,,,,,,D1:鲁迅故里(三味书屋体验)→百草园→黄酒博物馆 | D2:柯岩(坐船)→鲁镇(社戏)→安昌(扯白糖体验),travel_route,mafengwo,,绍兴亲子2日游,,mafengwo_static,mafengwo_static:familyroute,1,{'mafengwo': 1},,适合带小朋友，节奏轻松，兼顾趣味和教育,,,,,,,,2天,,三味书屋有私塾体验课；百草园可以认植物；扯白糖观看+品尝孩子都喜欢,
+,4,,travel_route,,,,,,,,,travel_route,wenglv,,鲁迅故里→沈园→书圣故里→仓桥直街,,ct.zj.gov.cn_static,,1,{'wenglv': 1},,,,深度体验绍兴人文历史,,,,,绍兴古城文化一日游,,,,
+,4,,travel_route,,,,,,,,,travel_route,wenglv,,D1:柯岩+鉴湖+鲁镇 / D2:安昌古镇+东湖,,ct.zj.gov.cn_static,,1,{'wenglv': 1},,,,水乡风情与自然山水结合,,,,,绍兴水乡古镇二日游,,,,
+,4,,travel_route,,,,,,,,,travel_route,wenglv,,兰亭景区→书圣故里→青藤书屋→绍兴博物馆,,ct.zj.gov.cn_static,,1,{'wenglv': 1},,,,追寻王羲之徐渭书法足迹,,,,,绍兴书法朝圣之旅,,,,
+,2,第40届兰亭书法节将于2026年农历三月初三在兰亭景区举行，届时将举办书法展览、曲水流觞等活动。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,,sxnews_static,,1,{'local_news': 1},2026绍兴兰亭书法节即将举办,,,,,,,,,,,,
+,2,2026年安昌腊月风情节期间，安昌古镇接待游客超50万人次，创历史新高。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,,sxnews_static,,1,{'local_news': 1},安昌古镇腊月风情节吸引游客超50万人次,,,,,,,,,,,,
+,1,,seasonal_event,宛委山樱花、吼山桃花、镜湖湿地油菜花、兰亭竹林,,,,,,,,seasonal_event,weixin,每年3-4月,,,,,1,{'weixin': 1},绍兴春季赏花指南,,,,,,,,,,,,
+,1,,seasonal_event,大香林桂花、会稽山红叶、鉴湖桂花节、天姥山秋色,,,,,,,,seasonal_event,weixin,每年10-11月,,,,,1,{'weixin': 1},绍兴秋季最佳旅游时间,,,,,,,,,,,,
+,1,,seasonal_event,安昌古镇腊味飘香、传统年俗体验、酱园开缸,,,,,,,,seasonal_event,weixin,每年腊月(12月-1月),,,,,1,{'weixin': 1},绍兴年味·安昌腊月风情节,,,,,,,,,,,,
+,3,绍兴市2025年新增3家国家4A级旅游景区，进一步丰富了绍兴旅游资源。,official_notice,,,,,,,,,official_notice,local_news,,,,sxnews_static,,1,{'local_news': 1},绍兴新增3家4A级景区,,,,,,,,,,,,
+,1,,local_food,臭豆腐、梅干菜扣肉、茴香豆、绍兴黄酒、醉鸡、酱鸭、霉苋菜梗、糟鸡、奶油小攀、次坞打面,,,,,,,,local_food,weixin,,,,,,1,{'weixin': 1},绍兴必吃十大美食,,,,,,,,,,,,
