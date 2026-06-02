@@ -137,22 +137,36 @@ class EntityMerger:
             if not name:
                 continue
 
-            # Determine if entity or content
+            # 内容判定规则 (满足任一即为内容):
             is_content = False
-            for content_cat in CONTENT_TYPES:
-                if content_cat in cat:
+
+            # 规则1: 数据类别明确为内容型
+            content_cats = ["attraction_review", "travel_route", "seasonal_event",
+                          "official_notice", "local_food", "游玩攻略", "文旅活动"]
+            for cc in content_cats:
+                if cc in cat:
                     is_content = True
                     break
 
-            # Also check by field presence
-            if item.get("游玩建议") or item.get("推荐游览顺序") or item.get("路线"):
-                is_content = True
-            if item.get("线路名") and item.get("天数"):
-                is_content = True
-            if item.get("主题") and not item.get("地址"):
+            # 规则2: 字段特征为内容型
+            if (item.get("游玩建议") or item.get("推荐游览顺序") or
+                item.get("路线") or item.get("推荐路线") or
+                item.get("内容摘要") or item.get("时间") or
+                item.get("贴士")):
+                # 但排除有完整地址的实体数据
+                if not (item.get("地址") and item.get("开放时间")):
+                    is_content = True
+
+            # 规则3: 线路和活动
+            if (item.get("线路名") or item.get("主题") or item.get("标题")):
+                if not (item.get("地址") and len(item.get("地址", "")) > 5):
+                    is_content = True
+
+            # 规则4: 菜品信息属于内容
+            if item.get("所属店铺") or (item.get("分类") and item.get("分类") in ["土特产","糕点","甜品"]):
                 is_content = True
 
-            # Assign type
+            # Assign
             if is_content:
                 item["_entity_type"] = "content"
                 contents.append(item)
