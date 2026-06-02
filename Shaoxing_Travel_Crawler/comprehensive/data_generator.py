@@ -46,6 +46,9 @@ class DataGenerator:
         self.cultures = load_json('cultures.json')
         self.routes = load_json('routes.json')
         self.events = load_json('events.json')
+        self.accommodations = load_json('accommodations.json')
+        self.shopping = load_json('shopping.json') if (_DATA_DIR / 'shopping.json').exists() else []
+        self.study_tours = load_json('study_tours.json') if (_DATA_DIR / 'study_tours.json').exists() else []
 
     def generate_all(self) -> Dict[str, List[Dict]]:
         """生成全部数据"""
@@ -92,12 +95,26 @@ class DataGenerator:
         for e in self.events:
             results['seasonal_event'].append(e)
 
+        # 住宿 → 实体 + 内容
+        for a in self.accommodations:
+            results['attraction_basic'].append(self._gen_accommodation(a))
+            results['attraction_review'].append(self._gen_accommodation_tips(a))
+
+        # 购物 → 实体 + 内容
+        for s in self.shopping:
+            results['food_shop'].append(self._gen_shopping_shop(s))
+            results['local_food'].append(self._gen_shopping_product(s))
+
+        # 研学 → 内容
+        for st in self.study_tours:
+            results['attraction_review'].append(self._gen_study_tour(st))
+
         # 统计
         total = sum(len(v) for v in results.values())
         logger.info(f"数据生成完成: {total} 条 "
-                    f"(景点{len(self.attractions)}→{len(results['attraction_basic'])*2}维, "
-                    f"美食{len(self.foods)}→{len(results['food_shop'])+len(results['local_food'])}条, "
-                    f"文化{len(self.cultures)})")
+                    f"(景点{len(self.attractions)} 住宿{len(self.accommodations)} "
+                    f"美食{len(self.foods)} 购物{len(self.shopping)} "
+                    f"文化{len(self.cultures)} 研学{len(self.study_tours)})")
         return results
 
     # ---- 景点各维度生成 ----
@@ -219,4 +236,78 @@ class DataGenerator:
             '来源URL': f"comprehensive:event:{c['name']}",
             '来源平台': 'comprehensive', '信任等级': 3,
             '_data_category': 'seasonal_event',
+        }
+
+    # ---- 住宿生成 ----
+    def _gen_accommodation(self, a: Dict) -> Dict:
+        return {
+            '名称': a['name'], '行政区': a.get('district', ''),
+            '地址': a.get('address', ''),
+            '分类': '住宿', '类型': a.get('type', ''),
+            '价格区间': a.get('price_range', ''),
+            '旺季价格': a.get('price_peak', ''),
+            '评分': a.get('rating', 4.0),
+            '标签': '|'.join(a.get('tags', [])),
+            '简介': a.get('summary', ''),
+            '周边景点': a.get('near_spot', ''),
+            '房型': '|'.join(a.get('room_types', [])),
+            '入住贴士': a.get('tips', ''),
+            '适宜季节': a.get('season', ''),
+            '来源URL': a.get('source_url', f"comprehensive:hotel:{a['name']}"),
+            '来源平台': 'comprehensive', '信任等级': 3,
+            '_data_category': 'attraction_basic',
+        }
+
+    def _gen_accommodation_tips(self, a: Dict) -> Dict:
+        return {
+            '景点': a['name'],
+            '游玩建议': f"推荐入住{a['name']}，{a.get('near_spot','')}",
+            '贴士': a.get('tips', ''),
+            '价格': a.get('price_range', ''),
+            '房型': '|'.join(a.get('room_types', [])),
+            '来源URL': a.get('source_url', ''),
+            '来源平台': 'comprehensive', '信任等级': 2,
+            '_data_category': 'attraction_review',
+        }
+
+    # ---- 购物生成 ----
+    def _gen_shopping_shop(self, s: Dict) -> Dict:
+        return {
+            '店名': s['name'], '类型': s.get('type', '特产购物'),
+            '地址': s.get('address', ''),
+            '人均': s.get('price_range', ''),
+            '推荐': s.get('products', ''),
+            '简介': s.get('summary', ''),
+            '选购贴士': s.get('tips', ''),
+            '来源URL': s.get('source_url', ''),
+            '来源平台': 'comprehensive', '信任等级': 3,
+            '_data_category': 'food_shop',
+        }
+
+    def _gen_shopping_product(self, s: Dict) -> Dict:
+        return {
+            '名称': s.get('product_name', s.get('name', '')),
+            '分类': '特产',
+            '价格': s.get('price_range', ''),
+            '产地': s.get('address', ''),
+            '简介': s.get('summary', ''),
+            '来源URL': s.get('source_url', ''),
+            '来源平台': 'comprehensive', '信任等级': 2,
+            '_data_category': 'local_food',
+        }
+
+    # ---- 研学生成 ----
+    def _gen_study_tour(self, st: Dict) -> Dict:
+        return {
+            '景点': st.get('location', st.get('name', '')),
+            '游玩建议': st.get('program_name', ''),
+            '适合年龄': st.get('age_range', ''),
+            '课程时长': st.get('duration', ''),
+            '贴士': st.get('tips', ''),
+            '预约方式': st.get('booking', ''),
+            '收费': st.get('price', ''),
+            '标签': '|'.join(st.get('tags', [])),
+            '来源URL': st.get('source_url', ''),
+            '来源平台': 'comprehensive', '信任等级': 3,
+            '_data_category': 'attraction_review',
         }
