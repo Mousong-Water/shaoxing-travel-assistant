@@ -92,7 +92,7 @@ class MafengwoScraper:
         for guide in items:
             item = dict(guide)
             item['来源'] = 'mafengwo_static'
-            item['来源URL'] = guide.get('来源URL', f'mafengwo_static:{guide.get(\"景点\",\"\")}')
+            item['来源URL'] = guide.get('来源URL', 'mafengwo_static:' + guide.get('景点', ''))
             item['_data_category'] = 'attraction_review' if '日游' not in guide.get('景点','') else 'travel_route'
             item['_trust_level'] = 2
             results.append(item)
