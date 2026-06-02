@@ -20,9 +20,7 @@ from scrapers.xiaohongshu_scraper import XiaohongshuScraper
 from scrapers.zhihu_scraper import ZhihuScraper
 from data_verifier.cross_validator import CrossValidator, FactChecker
 from data_classifier.content_classifier import ContentClassifier
-from data_merger.csv_writer import write_to_csv, write_summary_csv
 from data_merger.db_writer import write_to_sqlite
-from data_quality.pipeline_v2 import clean_pipeline
 
 
 def main():
@@ -113,25 +111,87 @@ def main():
     print("\n[Phase E] 内容分类...")
     classified = ContentClassifier().classify(all_verified)
 
-    # ========== Phase E2: 数据清洗管线 v2 ==========
-    print("\n[Phase E2] 数据清洗 v2 (去重+填字段+统分类)...")
-    cleaned = clean_pipeline(classified)
+    # ========== Phase E2: 实体合并引擎 ==========
+    print("\n[Phase E2] 实体合并 (名称+距离+分类 三重校验)...")
+    # 展开分类数据为列表
+    all_items = []
+    for cat, items in classified.items():
+        for item in items:
+            item["_data_category"] = item.get("_data_category", cat)
+            all_items.append(item)
+
+    from data_quality.entity_merger import EntityMerger
+    merger = EntityMerger(name_threshold=0.75, geo_threshold_m=500)
+    entities, contents = merger.merge(all_items)
+
+    print(f"  实体表: {len(entities)} 条")
+    print(f"  内容表: {len(contents)} 条")
+    print(f"  合计: {len(entities) + len(contents)} 条")
+
+    # 实体分类统计
+    etype_counts = {}
+    for e in entities:
+        t = e.get("实体类型", "其他")
+        etype_counts[t] = etype_counts.get(t, 0) + 1
+    for t, c in sorted(etype_counts.items()):
+        print(f"    实体[{t}]: {c} 条")
+
+    # 内容关联统计
+    linked = sum(1 for c in contents if c.get("entity_id"))
+    print(f"  内容关联率: {linked}/{len(contents)} ({100*linked//max(len(contents),1)}%)")
 
     # ========== Phase F: 导出 ==========
-    print("\n[Phase F] 导出...")
+    print("\n[Phase F] 导出实体表+内容表...")
     csv_dir = Path(__file__).parent / "output"
     csv_dir.mkdir(parents=True, exist_ok=True)
-    csv_files = write_to_csv(cleaned, csv_dir)
-    write_summary_csv(cleaned, csv_dir / "all_data_summary_latest.csv")
-    db_path = write_to_sqlite(cleaned)
+
+    # 实体表导出
+    import csv
+    entity_path = csv_dir / "entities_latest.csv"
+    if entities:
+        efields = list(entities[0].keys())
+        with open(entity_path, 'w', newline='', encoding='utf-8-sig') as f:
+            w = csv.DictWriter(f, fieldnames=efields, extrasaction='ignore')
+            w.writeheader()
+            for e in entities:
+                w.writerow(e)
+    print(f"  实体表: {entity_path}")
+
+    # 内容表导出
+    content_path = csv_dir / "contents_latest.csv"
+    if contents:
+        cfields = [k for k in contents[0].keys() if not k.startswith('_')]
+        with open(content_path, 'w', newline='', encoding='utf-8-sig') as f:
+            w = csv.DictWriter(f, fieldnames=cfields, extrasaction='ignore')
+            w.writeheader()
+            for c in contents:
+                clean = {k: v for k, v in c.items() if not k.startswith('_') and k in cfields}
+                w.writerow(clean)
+    print(f"  内容表: {content_path}")
+
+    # 汇总CSV
+    all_rows = entities + contents
+    summary_path = csv_dir / "all_data_summary_latest.csv"
+    if all_rows:
+        sfields = list(set().union(*(d.keys() for d in all_rows)))
+        sfields = [f for f in sfields if not f.startswith('_')]
+        with open(summary_path, 'w', newline='', encoding='utf-8-sig') as f:
+            w = csv.DictWriter(f, fieldnames=sfields, extrasaction='ignore')
+            w.writeheader()
+            for row in all_rows:
+                w.writerow({k: v for k, v in row.items() if not str(k).startswith('_')})
+    print(f"  汇总: {summary_path}")
+
+    # SQLite
+    db_path = write_to_sqlite({"entity": entities, "content": contents} if entities else classified)
 
     # ========== 总结 ==========
-    total = sum(len(v) for v in cleaned.values())
+    total = len(entities) + len(contents)
     print(f"\n{'='*70}")
-    print(f"  ✓ 完成! 总计: {total} 条")
-    for cat, items in sorted(cleaned.items()):
-        print(f"    {cat}: {len(items)} 条")
-    print(f"  1700条目标: {'✅ 达标' if total >= 1700 else f'差{1700-total}条'}")
+    print(f"  ✓ 完成! 实体{len(entities)} + 内容{len(contents)} = {total} 条")
+    print(f"  目标: 300实体 + 500内容 = 800条")
+    print(f"  实体达标: {'✅' if len(entities) >= 250 else '差' + str(250-len(entities))}")
+    print(f"  内容达标: {'✅' if len(contents) >= 400 else '差' + str(400-len(contents))}")
     print(f"  SQLite: {db_path}")
     print(f"{'='*70}")
 
