@@ -55,7 +55,8 @@ def write_to_csv(data: Dict[str, List[Dict]], output_dir: Path = None) -> Dict[s
             # 过滤内部字段
             columns = [c for c in columns if not c.startswith('_')]
 
-        csv_path = output_dir / f"{cat}_{timestamp}.csv"
+        # 固定文件名（覆盖模式，避免重复运行产生重复文件）
+        csv_path = output_dir / f"{cat}_latest.csv"
 
         with open(csv_path, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
@@ -77,8 +78,7 @@ def write_summary_csv(data: Dict[str, List[Dict]], output_path: Path = None) -> 
     导出汇总CSV (所有分类合并到一个文件)。
     """
     if output_path is None:
-        output_path = Path('Shaoxing_Travel_Crawler/output') / \
-                      f"summary_{datetime.now():%Y%m%d_%H%M%S}.csv"
+        output_path = Path('Shaoxing_Travel_Crawler/output') / "all_data_summary_latest.csv"
 
     all_items = []
     for cat, items in data.items():

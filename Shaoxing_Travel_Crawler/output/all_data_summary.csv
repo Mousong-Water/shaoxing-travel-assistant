@@ -1,19 +1,35 @@
-﻿信任等级,内容分类,名称,地址,地址_可信度,地址_备选值,开放时间,数据分类,数据来源,来源数量,来源详情,游玩时长,简介,简介_可信度,简介_备选值,评分,门票价格
-4,attraction_basic,鲁迅故里,,,,08:30-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,绍兴最具代表性的人文景点，包含鲁迅祖居、三味书屋、百草园,,,,免费
-4,attraction_basic,沈园,,,,08:00-21:00,attraction_basic,gov_api,1,{'gov_api': 1},,南宋著名园林，因陆游与唐婉的爱情故事而闻名,,,,40元
-4,attraction_basic,东湖,,,,08:00-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,古代采石场遗址，以悬崖峭壁和深潭碧水闻名,,,,50元
-4,attraction_basic,兰亭景区,,,,08:00-17:20,attraction_basic,gov_api,1,{'gov_api': 1},,因王羲之《兰亭序》闻名天下，书法圣地,,,,70元
-4,attraction_basic,柯岩风景区,,,,08:30-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,包含柯岩、鉴湖、鲁镇三大景区,,,,115元
-4,attraction_basic,安昌古镇,,,,全天开放,attraction_basic,gov_api,1,{'gov_api': 1},,绍兴保存最完好的水乡古镇之一，以酱文化和腊味闻名,,,,免费
-4,attraction_basic,大禹陵,,,,08:00-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,中华民族始祖大禹的陵寝之地,,,,50元
-4,attraction_basic,新昌大佛寺,,,,08:00-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,江南第一大佛，始凿于南朝齐梁年间,,,,60元
-4,attraction_basic,五泄风景区,,,,07:30-17:00,attraction_basic,gov_api,1,{'gov_api': 1},,以五级瀑布闻名，东南第一秀水,,,,80元
-4,attraction_basic,穿岩十九峰,,,,08:00-16:30,attraction_basic,gov_api,1,{'gov_api': 1},,丹霞地貌，19座山峰一字排列，有玻璃栈道,,,,60元
-2,attraction_culture,西施故里,,,,,attraction_culture,baike,1,{'baike': 1},,西施故里是中国4A级旅游景区，坐落于西施的故乡——浙江绍兴诸暨，是诸暨的国家级风景名胜区、浣江•五泄国家重点风景名胜区的重要组成部分 [6] [10]。整个旅游区规划总面积1.85平方公里，按功能划分为一轴一心六区 [9]。一轴为南北穿越整个旅游区的浣江游览带，一心指已有一定规模的西施殿景区，六片指主入口管理区、鸬鹚湾古渔村景区、古越文化区、美苑休闲娱乐区、三江口湿地生态保护区、休闲度假区 [8] [10]。景区免费开放，部分场馆单独收费 [7]，推出沉浸式夜游项目《遇见西施》浣纱江夜游和《梦寻西施》沉浸式演出 [4] [13]，其中浣纱江夜游串联景区与周边热点形成多元夜间消费市场 [4] [11]。西施殿现存建筑重建于上世纪八十年代末，本世纪初扩建，利用了民间保存的万余件古建筑构件 [4]，2024年4月7日起闭园修整。景区内包含西施殿、中国历代名媛馆、范蠡祠、郑氏宗祠等景点，融合文旅休闲业态 [4-5] [13]，浣纱石留有东晋王羲之题字及历代文人诗文记载。范蠡祠采用清代民间建筑风格，展示范蠡军事政治及商业才能 [4]。2022年启动的“一江两岸”项目累计投入36.45亿元，完成基,,,,
-2,food_shop,咸亨酒店,越城区鲁迅中路179号,有冲突,['鲁迅故里景区内'],,food_shop,dianping,1,{'dianping': 2},,因鲁迅小说《孔乙己》闻名，绍兴老字号,有冲突,['景区内分店，适合游客体验'],,
-2,food_shop,同心楼,越城区解放北路430号,,,,food_shop,dianping,1,{'dianping': 1},,绍兴百年老店，以面点小吃闻名,,,,
-2,food_shop,寻宝记绍兴菜,越城区仓桥直街114号,,,,food_shop,dianping,1,{'dianping': 1},,仓桥直街上的网红绍兴菜馆,,,,
-2,food_shop,孔乙己酒家,越城区鲁迅中路273号,,,,food_shop,dianping,1,{'dianping': 1},,鲁迅主题绍兴菜馆，文化氛围浓厚,,,,
-2,food_shop,状元楼,越城区胜利西路,,,,food_shop,dianping,1,{'dianping': 1},,绍兴老牌酒楼，以传统绍兴菜见长,,,,
-2,food_shop,仓桥阿丘面馆,越城区仓桥直街,,,,food_shop,dianping,1,{'dianping': 1},,仓桥直街巷子里的地道面馆,,,,
-2,food_shop,黄酒博物馆文创店,越城区下大路557号,,,,food_shop,dianping,1,{'dianping': 1},,黄酒博物馆附设商店，可品酒购酒,,,,
+﻿信任等级,内容,内容分类,内容摘要,名称,地址,店名,开放时间,推荐,推荐游览顺序,推荐路线,数据分类,数据来源,时间,景点,来源,来源数量,来源详情,标题,游玩建议,游玩时长,特色,简介,类型,线路名,耗时,评分,贴士,门票价格
+4,,attraction_basic,,鲁迅故里,,,08:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,绍兴最具代表性的人文景点，包含鲁迅祖居、三味书屋、百草园,,,,,,免费
+4,,attraction_basic,,沈园,,,08:00-21:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,南宋著名园林，因陆游与唐婉的爱情故事而闻名,,,,,,40元
+4,,attraction_basic,,东湖,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,古代采石场遗址，以悬崖峭壁和深潭碧水闻名,,,,,,50元
+4,,attraction_basic,,兰亭景区,,,08:00-17:20,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,因王羲之《兰亭序》闻名天下，书法圣地,,,,,,70元
+4,,attraction_basic,,柯岩风景区,,,08:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,包含柯岩、鉴湖、鲁镇三大景区,,,,,,115元
+4,,attraction_basic,,安昌古镇,,,全天开放,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,绍兴保存最完好的水乡古镇之一，以酱文化和腊味闻名,,,,,,免费
+4,,attraction_basic,,大禹陵,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,中华民族始祖大禹的陵寝之地,,,,,,50元
+4,,attraction_basic,,新昌大佛寺,,,08:00-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,江南第一大佛，始凿于南朝齐梁年间,,,,,,60元
+4,,attraction_basic,,五泄风景区,,,07:30-17:00,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,以五级瀑布闻名，东南第一秀水,,,,,,80元
+4,,attraction_basic,,穿岩十九峰,,,08:00-16:30,,,,attraction_basic,gov_api,,,,1,{'gov_api': 1},,,,,丹霞地貌，19座山峰一字排列，有玻璃栈道,,,,,,60元
+2,,attraction_culture,,周恩来祖居,,,,,,,attraction_culture,baike,,,,1,{'baike': 1},,,,,周恩来祖居位于浙江省绍兴市越城区劳动路369号，为省级文物保护单位 [3-5]。建筑始建于明代，占地面积2150平方米，建筑面积1680平方米，采用三进台门式布局，现存门斗、大厅、座楼及四个天井，以黑色竹丝台门为特色 [2-4]。祖居原名锡养堂，清康熙三十七年（1698年）因周懋章妻王氏百岁获赐匾额改称百岁堂。1939年3月周恩来以国民政府军事委员会政治部副部长身份在此开展抗日活动，续填周氏宗谱并题词 [3-5]。1956年台风损毁部分建筑后改建平房，1980年代按原貌修复座楼并恢复百岁堂名称，门楣匾额由陈云题写。1997年被列为浙江省文物保护单位，1998年扩建广场并树立周恩来铜像 [3] [5] [7]。现设有周恩来史迹陈列室，展示其生前用品、周氏家谱及历史资料 [2] [6]，作为爱国主义教育基地对外开放 [5]。,,,,,,
+2,,food_shop,,,越城区鲁迅中路179号,咸亨酒店,,茴香豆、绍兴黄酒、梅干菜扣肉,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,因鲁迅小说《孔乙己》闻名，绍兴老字号,绍兴菜,,,,,
+2,,food_shop,,,鲁迅故里景区内,咸亨酒店(中餐厅),,醉鸡、臭豆腐、酱鸭,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,景区内分店，适合游客体验,绍兴菜,,,,,
+2,,food_shop,,,越城区解放北路430号,同心楼,,生煎包、片儿川,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,绍兴百年老店，以面点小吃闻名,小吃面点,,,,,
+2,,food_shop,,,越城区仓桥直街114号,寻宝记绍兴菜,,醉蟹、梅干菜扣肉、宋嫂鱼羹,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,仓桥直街上的网红绍兴菜馆,绍兴菜,,,,,
+2,,food_shop,,,越城区鲁迅中路273号,孔乙己酒家,,茴香豆、花雕鸡、绍兴三臭,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,鲁迅主题绍兴菜馆，文化氛围浓厚,绍兴菜,,,,,
+2,,food_shop,,,越城区胜利西路,状元楼,,清汤越鸡、干菜焖肉,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,绍兴老牌酒楼，以传统绍兴菜见长,绍兴菜,,,,,
+2,,food_shop,,,越城区仓桥直街,仓桥阿丘面馆,,次坞打面、片儿川,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,仓桥直街巷子里的地道面馆,面馆,,,,,
+2,,food_shop,,,越城区下大路557号,黄酒博物馆文创店,,各种年份黄酒、黄酒棒冰、黄酒奶茶,,,food_shop,dianping,,,dianping_static,1,{'dianping': 1},,,,,黄酒博物馆附设商店，可品酒购酒,特产购物,,,,,
+2,,attraction_review,,,,,,,鲁迅祖居→三味书屋→百草园→鲁迅纪念馆,,attraction_review,mafengwo,,鲁迅故里,mafengwo_guide,1,{'mafengwo': 1},,建议上午9点前到达避开人流高峰,,,,,,2-3小时,,百草园免费，三味书屋可体验私塾课,
+2,,attraction_review,,,,,,,入口→陶公洞→仙桃洞→听湫亭,,attraction_review,mafengwo,,东湖,mafengwo_guide,1,{'mafengwo': 1},,乘乌篷船是精华，建议坐船进、步行出,,,,,,2-3小时,,乌篷船票需另购，节假日排队较长,
+2,,attraction_review,,,,,,,鹅池→流觞亭→御碑亭→王右军祠→书法博物馆,,attraction_review,mafengwo,,兰亭景区,mafengwo_guide,1,{'mafengwo': 1},,春季最佳，竹林新绿、曲水流觞,,,,,,2-3小时,,农历三月三书法节期间有现场挥毫活动,
+2,,attraction_review,,,,,,,古镇入口→仁昌酱园→老街→沿河漫步,,attraction_review,mafengwo,,安昌古镇,mafengwo_guide,1,{'mafengwo': 1},,腊月最佳，可体验传统年味,,,,,,2-3小时,,腊味、扯白糖是必买特产，酱园可免费参观,
+2,,travel_route,,,,,,,,D1鲁迅故里+沈园 / D2柯岩+安昌古镇 / D3兰亭+东湖,travel_route,mafengwo,,绍兴整体,mafengwo_guide,1,{'mafengwo': 2},,2-3日游最适宜，春秋季节最佳,,,,,,,,可购买绍兴旅游联票(含多个景点)更划算,
+4,,travel_route,,,,,,,,,travel_route,wenglv,,鲁迅故里→沈园→书圣故里→仓桥直街,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,深度体验绍兴人文历史,,,绍兴古城文化一日游,,,,
+4,,travel_route,,,,,,,,,travel_route,wenglv,,D1:柯岩+鉴湖+鲁镇 / D2:安昌古镇+东湖,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,水乡风情与自然山水结合,,,绍兴水乡古镇二日游,,,,
+4,,travel_route,,,,,,,,,travel_route,wenglv,,兰亭景区→书圣故里→青藤书屋→绍兴博物馆,ct.zj.gov.cn_static,1,{'wenglv': 1},,,,追寻王羲之徐渭书法足迹,,,绍兴书法朝圣之旅,,,,
+2,第40届兰亭书法节将于2026年农历三月初三在兰亭景区举行，届时将举办书法展览、曲水流觞等活动。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,sxnews_static,1,{'local_news': 1},2026绍兴兰亭书法节即将举办,,,,,,,,,,
+2,2026年安昌腊月风情节期间，安昌古镇接待游客超50万人次，创历史新高。,seasonal_event,,,,,,,,,seasonal_event,local_news,,,sxnews_static,1,{'local_news': 1},安昌古镇腊月风情节吸引游客超50万人次,,,,,,,,,,
+1,,seasonal_event,宛委山樱花、吼山桃花、镜湖湿地油菜花、兰亭竹林,,,,,,,,seasonal_event,weixin,每年3-4月,,,1,{'weixin': 1},绍兴春季赏花指南,,,,,,,,,,
+1,,seasonal_event,大香林桂花、会稽山红叶、鉴湖桂花节、天姥山秋色,,,,,,,,seasonal_event,weixin,每年10-11月,,,1,{'weixin': 1},绍兴秋季最佳旅游时间,,,,,,,,,,
+1,,seasonal_event,安昌古镇腊味飘香、传统年俗体验、酱园开缸,,,,,,,,seasonal_event,weixin,每年腊月(12月-1月),,,1,{'weixin': 1},绍兴年味·安昌腊月风情节,,,,,,,,,,
+3,绍兴市2025年新增3家国家4A级旅游景区，进一步丰富了绍兴旅游资源。,official_notice,,,,,,,,,official_notice,local_news,,,sxnews_static,1,{'local_news': 1},绍兴新增3家4A级景区,,,,,,,,,,
+1,,local_food,臭豆腐、梅干菜扣肉、茴香豆、绍兴黄酒、醉鸡、酱鸭、霉苋菜梗、糟鸡、奶油小攀、次坞打面,,,,,,,,local_food,weixin,,,,1,{'weixin': 1},绍兴必吃十大美食,,,,,,,,,,
