@@ -282,7 +282,8 @@ class CrossValidator:
         if num_sources == 2:
             return 2
         if has_encyclopedia:
-            return min(2, max_item_trust)  # 百科数据至少2级
+            return min(2, max_item_trust)
+        # 单源数据不丢弃，默认信任等级=1 (修复3.1)
         return max(1, max_item_trust)
 
 

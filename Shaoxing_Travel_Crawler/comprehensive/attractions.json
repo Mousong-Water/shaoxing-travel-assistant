@@ -2077,5 +2077,761 @@
     ],
     "lat": 29.997,
     "lng": 120.572
+  },
+  {
+    "name": "绍兴名人广场",
+    "district": "越城区",
+    "address": "绍兴市越城区胜利西路",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.8,
+    "reviews": 800,
+    "tags": [
+      "城市广场",
+      "名人雕塑",
+      "免费"
+    ],
+    "category": "主题公园",
+    "best_season": "四季皆宜",
+    "summary": "绍兴名人广场以绍兴历代名人雕塑为主题，有大禹、勾践、王羲之、陆游、鲁迅等名人铜像。是了解绍兴名人文化的好去处。",
+    "transport": "公交1/2路至城市广场站",
+    "culture": {
+      "history": "广场建于2000年代，集中展示绍兴历代名人风采。",
+      "era": "2000年代",
+      "story": "广场上有大禹、勾践、王羲之、陆游、徐渭、秋瑾、鲁迅、蔡元培、周恩来等名人雕塑。",
+      "architecture": "现代城市广场+名人雕塑群。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "了解绍兴名人文化的快速入门",
+      "route": "大禹像→勾践像→王羲之像→陆游像→鲁迅像",
+      "duration": "30分钟",
+      "best_time": "四季皆宜",
+      "tips": "免费；与城市广场、仓桥直街串联"
+    }
+  },
+  {
+    "name": "绍兴环城河",
+    "district": "越城区",
+    "address": "绍兴市越城区环城河沿线",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 4.0,
+    "reviews": 1500,
+    "tags": [
+      "水系",
+      "环城",
+      "免费",
+      "散步",
+      "夜景"
+    ],
+    "category": "自然风光",
+    "best_season": "四季皆宜",
+    "summary": "绍兴环城河环绕古城一周，全长约12公里。沿河有步道和绿化带，适合散步骑行。夜晚灯光倒映水中景色迷人。",
+    "transport": "沿环城路多个入口",
+    "culture": {
+      "history": "环城河为绍兴古城护城河，历史悠久。近年改造为城市景观带。",
+      "era": "古代护城河",
+      "story": "环城河是绍兴水城格局的重要组成部分。沿河可看到八字桥、广宁桥等多座古桥。",
+      "architecture": "城市水系+景观步道+古桥。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "傍晚沿河散步最佳",
+      "route": "任意入口→沿河步道→古桥打卡",
+      "duration": "1-2小时",
+      "best_time": "傍晚和夜间",
+      "tips": "免费；可租自行车骑行"
+    }
+  },
+  {
+    "name": "稽山公园",
+    "district": "越城区",
+    "address": "绍兴市越城区稽山路",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.8,
+    "reviews": 900,
+    "tags": [
+      "城市公园",
+      "免费",
+      "越城区"
+    ],
+    "category": "自然风光",
+    "best_season": "四季皆宜",
+    "summary": "稽山公园是越城区的社区公园，以会稽山文化为主题。园内有小桥流水和亭台楼阁，是周边居民休闲好去处。",
+    "transport": "公交2路",
+    "culture": {
+      "history": "以会稽山文化命名。",
+      "era": "现代",
+      "story": "公园虽小但布局精致，是绍兴园林风格的微缩体现。",
+      "architecture": "社区公园+江南园林元素。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "适合短暂休憩",
+      "route": "公园入口→中心湖→假山→亭台",
+      "duration": "30分钟",
+      "best_time": "四季皆宜",
+      "tips": "免费；适合短暂休息"
+    }
+  },
+  {
+    "name": "绍兴市美术馆",
+    "district": "越城区",
+    "address": "绍兴市越城区人民西路",
+    "open_time": "09:00-16:30(周一闭馆)",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 1200,
+    "tags": [
+      "美术馆",
+      "展览",
+      "免费",
+      "书画"
+    ],
+    "category": "文博场馆",
+    "best_season": "四季皆宜",
+    "summary": "绍兴市美术馆定期举办书画展、摄影展等。馆藏以绍兴籍书画家作品为特色，是了解绍兴书画艺术的好去处。",
+    "transport": "公交1/2路",
+    "culture": {
+      "history": "绍兴是书画之乡，孕育了王羲之、徐渭、陈洪绶等书画大家。",
+      "era": "现代",
+      "story": "馆藏徐渭、陈洪绶、赵之谦等绍兴籍书画家作品。",
+      "architecture": "现代美术馆建筑。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "书画爱好者可关注特展信息",
+      "route": "一楼临展厅→二楼常设展厅",
+      "duration": "1小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；周一闭馆"
+    }
+  },
+  {
+    "name": "绍兴大剧院",
+    "district": "越城区",
+    "address": "绍兴市越城区解放北路",
+    "open_time": "按演出时间",
+    "ticket": "按演出定价",
+    "rating": 4.0,
+    "reviews": 1800,
+    "tags": [
+      "剧院",
+      "演出",
+      "越剧",
+      "文化"
+    ],
+    "category": "文博场馆",
+    "best_season": "四季皆宜",
+    "summary": "绍兴大剧院是绍兴最大的演出场所，定期上演越剧、话剧、音乐会等。建筑外观现代，是绍兴文化地标之一。",
+    "transport": "公交1/2路",
+    "culture": {
+      "history": "2000年代建成，是绍兴文化演出中心。",
+      "era": "2000年代",
+      "story": "越剧《梁祝》《红楼梦》等经典剧目在此常演。",
+      "architecture": "现代剧院建筑。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "可关注越剧演出排期",
+      "route": "大厅→观众席",
+      "duration": "2-3小时(含演出)",
+      "best_time": "按演出排期",
+      "tips": "需提前购票"
+    }
+  },
+  {
+    "name": "上虞曹娥江",
+    "district": "上虞区",
+    "address": "绍兴市上虞区曹娥江沿岸",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 1100,
+    "tags": [
+      "江河",
+      "上虞",
+      "免费",
+      "自然"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "曹娥江是绍兴母亲河之一，因孝女曹娥得名。江畔有步道和公园，适合散步骑行。",
+    "transport": "上虞区公交",
+    "culture": {
+      "history": "曹娥江因汉代孝女曹娥得名。沿岸有曹娥庙和中华孝德园。",
+      "era": "自然形成",
+      "story": "曹娥投江救父的故事流传千年。曹娥江不仅是自然景观也是孝文化象征。",
+      "architecture": "江河景观+沿江步道。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "春天江边散步最舒适",
+      "route": "曹娥庙→曹娥江畔→中华孝德园",
+      "duration": "2-3小时",
+      "best_time": "春秋季",
+      "tips": "免费；与曹娥庙串联游览"
+    }
+  },
+  {
+    "name": "新昌天烛仙境",
+    "district": "新昌县",
+    "address": "绍兴市新昌县澄潭镇",
+    "open_time": "08:00-17:00",
+    "ticket": "50元",
+    "rating": 4.0,
+    "reviews": 1400,
+    "tags": [
+      "湖泊",
+      "峡谷",
+      "新昌",
+      "自然风光"
+    ],
+    "category": "自然风光",
+    "best_season": "夏秋",
+    "summary": "天烛仙境是新昌近年开发的自然景区。碧水丹山相映成趣，有游船和登山步道。夏季凉爽是避暑佳地。",
+    "transport": "新昌客运站乘专线",
+    "culture": {
+      "history": "景区为近年开发，以丹霞地貌和清澈湖水为特色。",
+      "era": "自然形成",
+      "story": "天烛峰形似蜡烛得名。湖水清澈见底被称为小九寨。",
+      "architecture": "山水景区+游船+步道。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "夏季避暑最佳",
+      "route": "入口→天烛湖→天烛峰→登山步道",
+      "duration": "3-4小时",
+      "best_time": "夏秋季",
+      "tips": "景区较新设施完善"
+    }
+  },
+  {
+    "name": "诸暨白塔湖",
+    "district": "诸暨市",
+    "address": "绍兴市诸暨市店口镇",
+    "open_time": "08:00-17:00",
+    "ticket": "40元",
+    "rating": 4.0,
+    "reviews": 1300,
+    "tags": [
+      "湖泊",
+      "湿地",
+      "诸暨",
+      "自然风光"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "白塔湖是诸暨最大的淡水湖，有浙中小洞庭之称。湖中有岛屿数十个，可乘船游览，秋季芦花飘荡景色最美。",
+    "transport": "诸暨客运中心乘班车",
+    "culture": {
+      "history": "白塔湖为天然湖泊，历代为诸暨重要水源地。",
+      "era": "自然形成",
+      "story": "白塔湖有浙中小洞庭美誉。湖中岛屿星罗棋布。",
+      "architecture": "自然湖泊+游船。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "秋季芦花季最美",
+      "route": "码头→游船环湖→登岛→返回",
+      "duration": "2-3小时",
+      "best_time": "秋季",
+      "tips": "游船需另购票"
+    }
+  },
+  {
+    "name": "嵊州剡溪",
+    "district": "嵊州市",
+    "address": "绍兴市嵊州市剡溪沿岸",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 900,
+    "tags": [
+      "溪流",
+      "嵊州",
+      "唐诗之路",
+      "免费"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "剡溪是浙东唐诗之路的重要水道。李白、杜甫等诗人曾泛舟剡溪。溪水清澈两岸青山，适合自驾沿溪游览。",
+    "transport": "建议自驾",
+    "culture": {
+      "history": "剡溪为浙东唐诗之路水路段。李白梦游天姥吟留别提到的镜湖→剡溪→天姥山线路即经此。",
+      "era": "自然形成",
+      "story": "湖月照我影送我至剡溪——李白。剡溪是唐代诗人游历浙东的必经水道。",
+      "architecture": "自然溪流景观。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "唐诗之路爱好者必访",
+      "route": "剡溪大桥→沿溪公路→剡溪风光带",
+      "duration": "2-3小时",
+      "best_time": "春秋季",
+      "tips": "免费；自驾最佳"
+    }
+  },
+  {
+    "name": "绍兴柯桥古镇",
+    "district": "柯桥区",
+    "address": "绍兴市柯桥区柯桥街道",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 4.0,
+    "reviews": 1100,
+    "tags": [
+      "古镇",
+      "水乡",
+      "柯桥",
+      "免费"
+    ],
+    "category": "古镇街区",
+    "best_season": "四季皆宜",
+    "summary": "柯桥古镇是绍兴近年修复的水乡古镇街区。保留了传统水乡格局，有古桥老屋和现代商业的融合。",
+    "transport": "公交5路",
+    "culture": {
+      "history": "柯桥为绍兴重要商贸古镇，明清时期商贾云集。",
+      "era": "明清",
+      "story": "柯桥因桥得名。古镇修复后融合了传统文化和现代商业。",
+      "architecture": "水乡古镇+现代商业街区。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "适合悠闲逛街",
+      "route": "柯桥古桥→老街→运河畔",
+      "duration": "1-2小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；有咖啡馆和文创店"
+    }
+  },
+  {
+    "name": "上虞祝家庄",
+    "district": "上虞区",
+    "address": "绍兴市上虞区丰惠镇",
+    "open_time": "08:30-16:30",
+    "ticket": "30元",
+    "rating": 4.0,
+    "reviews": 800,
+    "tags": [
+      "祝英台",
+      "梁祝",
+      "上虞",
+      "爱情圣地"
+    ],
+    "category": "人文历史",
+    "best_season": "春秋",
+    "summary": "祝家庄传为祝英台故里，是梁祝爱情故事的发源地之一。景区内有祝府、英台楼等景点。",
+    "transport": "上虞区公交",
+    "culture": {
+      "history": "祝英台传说源于东晋。祝家庄为梁祝故事中祝英台的家乡。",
+      "era": "东晋传说",
+      "story": "梁祝故事是中国四大民间传说之一。祝英台女扮男装求学遇梁山伯，演绎千古爱情绝唱。",
+      "architecture": "仿古园林+祝英台文化展示。",
+      "heritage_level": "浙江省非物质文化遗产"
+    },
+    "visit_tips": {
+      "advice": "梁祝爱好者朝圣之地",
+      "route": "祝府大门→英台楼→梁祝文化展厅",
+      "duration": "1小时",
+      "best_time": "春秋季",
+      "tips": "有梁祝文化展览"
+    }
+  },
+  {
+    "name": "诸暨东白湖",
+    "district": "诸暨市",
+    "address": "绍兴市诸暨市东白湖镇",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 700,
+    "tags": [
+      "水库",
+      "诸暨",
+      "自然",
+      "免费"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "东白湖是诸暨大型水库，湖光山色优美。周边有斯宅古村和千柱屋等景点。适合自驾环湖游览。",
+    "transport": "建议自驾",
+    "culture": {
+      "history": "东白湖为人工水库，建于1950年代。",
+      "era": "1950年代",
+      "story": "东白湖周边有斯宅古村和千柱屋，可串联游览。",
+      "architecture": "人工湖+自然山色。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "自驾环湖+访古村",
+      "route": "东白湖大坝→环湖公路→斯宅古村",
+      "duration": "2-3小时",
+      "best_time": "春秋季",
+      "tips": "免费；建议自驾"
+    }
+  },
+  {
+    "name": "绍兴儿童公园",
+    "district": "越城区",
+    "address": "绍兴市越城区解放南路",
+    "open_time": "09:00-17:00",
+    "ticket": "20元",
+    "rating": 3.8,
+    "reviews": 1200,
+    "tags": [
+      "游乐园",
+      "亲子",
+      "越城区"
+    ],
+    "category": "主题公园",
+    "best_season": "四季皆宜",
+    "summary": "绍兴儿童公园是绍兴最早的游乐园，有摩天轮、旋转木马等游乐设施。适合带小朋友游玩。",
+    "transport": "公交1/2路",
+    "culture": {
+      "history": "绍兴最早的游乐园，建于1980年代。",
+      "era": "1980年代",
+      "story": "是绍兴几代人的童年记忆。",
+      "architecture": "传统游乐园。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "适合亲子游",
+      "route": "入口→游乐区→摩天轮",
+      "duration": "1-2小时",
+      "best_time": "四季皆宜",
+      "tips": "游乐项目另收费"
+    }
+  },
+  {
+    "name": "绍兴镜湖乐园",
+    "district": "越城区",
+    "address": "绍兴市越城区镜湖新区",
+    "open_time": "09:30-17:30",
+    "ticket": "120元",
+    "rating": 4.1,
+    "reviews": 2100,
+    "tags": [
+      "水上乐园",
+      "亲子",
+      "镜湖",
+      "夏季"
+    ],
+    "category": "主题公园",
+    "best_season": "夏",
+    "summary": "镜湖乐园是绍兴大型水上乐园，有水上滑梯、造浪池、漂流河等设施。夏季消暑好去处。",
+    "transport": "公交15路",
+    "culture": {
+      "history": "2010年代建成，是绍兴最大的水上乐园。",
+      "era": "2010年代",
+      "story": "镜湖乐园依托镜湖水域，是绍兴夏季最热门的亲子游乐目的地。",
+      "architecture": "水上乐园+游乐设施。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "夏季消暑最佳选择",
+      "route": "入口→造浪池→水上滑梯→漂流河→儿童区",
+      "duration": "3-4小时",
+      "best_time": "夏季(6-8月)",
+      "tips": "需自带泳衣；夏季周末人多"
+    }
+  },
+  {
+    "name": "绍兴东方山水乐园",
+    "district": "柯桥区",
+    "address": "绍兴市柯桥区鉴湖路",
+    "open_time": "09:30-17:00",
+    "ticket": "150元",
+    "rating": 4.0,
+    "reviews": 1800,
+    "tags": [
+      "主题乐园",
+      "亲子",
+      "柯桥",
+      "室内"
+    ],
+    "category": "主题公园",
+    "best_season": "四季皆宜",
+    "summary": "东方山水乐园是绍兴大型室内主题乐园，有4D影院、互动体验馆等。不受天气影响全年可玩。",
+    "transport": "公交5路",
+    "culture": {
+      "history": "近年建成，是绍兴新兴的主题乐园。",
+      "era": "近年",
+      "story": "室内乐园不受天气影响，是雨天出游的好选择。",
+      "architecture": "室内主题乐园+科技体验。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "适合亲子+雨天",
+      "route": "入口→4D影院→互动区→纪念品店",
+      "duration": "3-4小时",
+      "best_time": "四季皆宜",
+      "tips": "建议网上提前购票有优惠"
+    }
+  },
+  {
+    "name": "新昌重阳宫",
+    "district": "新昌县",
+    "address": "绍兴市新昌县城关镇",
+    "open_time": "08:00-17:00",
+    "ticket": "20元",
+    "rating": 3.9,
+    "reviews": 700,
+    "tags": [
+      "道教",
+      "新昌",
+      "古建筑"
+    ],
+    "category": "宗教场所",
+    "best_season": "四季皆宜",
+    "summary": "重阳宫是新昌著名道观，始建于唐代。宫内古木参天环境清幽，是浙东道教圣地之一。",
+    "transport": "新昌公交",
+    "culture": {
+      "history": "始建于唐代，为浙东著名道观。",
+      "era": "唐代",
+      "story": "重阳宫为道教全真派道观。宫内有多株古树。",
+      "architecture": "道教宫观建筑群。",
+      "heritage_level": "新昌县文物保护单位"
+    },
+    "visit_tips": {
+      "advice": "道教文化爱好者可访",
+      "route": "山门→灵官殿→三清殿→后殿",
+      "duration": "1小时",
+      "best_time": "四季皆宜",
+      "tips": "游客较少环境清幽"
+    }
+  },
+  {
+    "name": "绍兴龙华寺",
+    "district": "越城区",
+    "address": "绍兴市越城区广宁桥附近",
+    "open_time": "08:00-17:00",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 600,
+    "tags": [
+      "佛教",
+      "寺庙",
+      "越城区",
+      "免费"
+    ],
+    "category": "宗教场所",
+    "best_season": "四季皆宜",
+    "summary": "龙华寺是绍兴城内古寺，始建于南朝。寺内有大雄宝殿和藏经楼。毗邻八字桥和广宁桥。",
+    "transport": "步行从八字桥可达",
+    "culture": {
+      "history": "始建于南朝梁代，距今1500余年。",
+      "era": "南朝梁代",
+      "story": "龙华寺与八字桥、广宁桥构成绍兴古桥寺庙景观群。",
+      "architecture": "传统寺庙建筑。",
+      "heritage_level": "绍兴市文物保护单位"
+    },
+    "visit_tips": {
+      "advice": "与八字桥、广宁桥串联",
+      "route": "八字桥→广宁桥→龙华寺",
+      "duration": "1小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；可串联游览"
+    }
+  },
+  {
+    "name": "诸暨斗岩",
+    "district": "诸暨市",
+    "address": "绍兴市诸暨市牌头镇",
+    "open_time": "08:00-17:00",
+    "ticket": "55元",
+    "rating": 4.1,
+    "reviews": 1600,
+    "tags": [
+      "丹霞地貌",
+      "登山",
+      "诸暨",
+      "自然风光"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "斗岩是诸暨丹霞地貌代表，以巨岩和奇峰闻名。有斗岩大佛和登天梯等景点，是登山爱好者好去处。",
+    "transport": "诸暨客运中心乘班车",
+    "culture": {
+      "history": "斗岩为丹霞地貌，形成于白垩纪。",
+      "era": "自然形成",
+      "story": "斗岩大佛为近年雕刻的巨型佛像。登天梯为绝壁栈道。",
+      "architecture": "丹霞地貌+登山步道+大佛。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "登山爱好者好去处",
+      "route": "入口→斗岩大佛→登天梯→山顶",
+      "duration": "3-4小时",
+      "best_time": "春秋季",
+      "tips": "体力要求较高"
+    }
+  },
+  {
+    "name": "嵊州南山湖",
+    "district": "嵊州市",
+    "address": "绍兴市嵊州市长乐镇",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.8,
+    "reviews": 500,
+    "tags": [
+      "湖泊",
+      "嵊州",
+      "自然",
+      "免费"
+    ],
+    "category": "自然风光",
+    "best_season": "春秋",
+    "summary": "南山湖是嵊州南部的人工湖，湖光山色秀丽。周边有茶园和竹林，是休闲度假好去处。",
+    "transport": "建议自驾",
+    "culture": {
+      "history": "南山湖为人工水库。",
+      "era": "现代",
+      "story": "南山湖周边茶园出产嵊州名茶。",
+      "architecture": "人工湖+茶园+竹林。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "自驾休闲好去处",
+      "route": "南山湖大坝→环湖公路→茶园",
+      "duration": "2-3小时",
+      "best_time": "春秋季",
+      "tips": "免费；适合自驾"
+    }
+  },
+  {
+    "name": "绍兴越国文化博物馆",
+    "district": "越城区",
+    "address": "绍兴市越城区鲁迅中路",
+    "open_time": "09:00-16:30",
+    "ticket": "免费",
+    "rating": 3.9,
+    "reviews": 600,
+    "tags": [
+      "博物馆",
+      "越国文化",
+      "免费",
+      "考古"
+    ],
+    "category": "文博场馆",
+    "best_season": "四季皆宜",
+    "summary": "越国文化博物馆专题展示越国历史文化。有越国青铜器、印纹陶等文物，是了解越文化的好去处。",
+    "transport": "步行从鲁迅故里可达",
+    "culture": {
+      "history": "越国为春秋五霸之一，都城在绍兴。博物馆集中展示越国考古成果。",
+      "era": "春秋战国时期",
+      "story": "馆藏越王勾践剑复制品和大量越国文物。",
+      "architecture": "专题博物馆。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "了解越国历史",
+      "route": "越国历史厅→越国文物厅→勾践专题",
+      "duration": "1小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；毗邻鲁迅故里"
+    }
+  },
+  {
+    "name": "绍兴气象博物馆",
+    "district": "越城区",
+    "address": "绍兴市越城区气象路",
+    "open_time": "09:00-16:30(周末闭馆)",
+    "ticket": "免费",
+    "rating": 3.7,
+    "reviews": 400,
+    "tags": [
+      "博物馆",
+      "气象",
+      "科普",
+      "免费"
+    ],
+    "category": "文博场馆",
+    "best_season": "四季皆宜",
+    "summary": "绍兴气象博物馆是中国首个气象专题博物馆。展示古代气象观测仪器和现代气象科技。",
+    "transport": "公交1路",
+    "culture": {
+      "history": "绍兴为中国气象科学发源地之一。竺可桢为绍兴人。",
+      "era": "现代",
+      "story": "竺可桢(1890-1974)绍兴人，中国气象学奠基人。",
+      "architecture": "专题博物馆。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "气象科普爱好者可访",
+      "route": "古代气象→现代气象→竺可桢专题",
+      "duration": "1小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；周末闭馆"
+    }
+  },
+  {
+    "name": "绍兴市图书馆",
+    "district": "越城区",
+    "address": "绍兴市越城区延安路",
+    "open_time": "09:00-20:30(周一闭馆)",
+    "ticket": "免费",
+    "rating": 4.0,
+    "reviews": 900,
+    "tags": [
+      "图书馆",
+      "文化",
+      "免费",
+      "学习"
+    ],
+    "category": "文博场馆",
+    "best_season": "四季皆宜",
+    "summary": "绍兴市图书馆是绍兴最大的公共图书馆。有古籍阅览室和绍兴地方文献专区，是研究绍兴文化的好去处。",
+    "transport": "公交1/2路",
+    "culture": {
+      "history": "绍兴自古文风鼎盛，历代藏书家辈出。",
+      "era": "现代",
+      "story": "图书馆设有绍兴地方文献专区和古籍阅览室。",
+      "architecture": "现代图书馆建筑。",
+      "heritage_level": ""
+    },
+    "visit_tips": {
+      "advice": "研究绍兴文化可去地方文献区",
+      "route": "一楼大厅→地方文献区→古籍区",
+      "duration": "1-2小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；周一闭馆"
+    }
+  },
+  {
+    "name": "绍兴古城墙遗址",
+    "district": "越城区",
+    "address": "绍兴市越城区府山周边",
+    "open_time": "全天",
+    "ticket": "免费",
+    "rating": 3.8,
+    "reviews": 500,
+    "tags": [
+      "城墙",
+      "遗址",
+      "古城",
+      "免费"
+    ],
+    "category": "人文历史",
+    "best_season": "四季皆宜",
+    "summary": "绍兴古城墙始建于春秋越国时期，现存遗址主要在府山周边。迎恩门是唯一修复的城门。",
+    "transport": "公交2/5路",
+    "culture": {
+      "history": "越国都城城墙始建于公元前5世纪。历代重修扩建。",
+      "era": "春秋战国至今",
+      "story": "绍兴古城墙见证了2500年城市历史。现存遗址是研究古代城市格局的重要实物。",
+      "architecture": "古城墙遗址+迎恩门修复。",
+      "heritage_level": "浙江省文物保护单位"
+    },
+    "visit_tips": {
+      "advice": "历史爱好者可沿府山寻城墙遗址",
+      "route": "府山→迎恩门→环城西路遗址",
+      "duration": "1-2小时",
+      "best_time": "四季皆宜",
+      "tips": "免费；遗址分散需步行"
+    }
   }
 ]
