@@ -123,12 +123,12 @@ class DouyinScraper:
                 seen_urls = set()
 
                 for kw in SEARCH_KEYWORDS:
-                    if len(results) >= 150:
+                    if len(results) >= 300:
                         break
                     try:
                         url = f"https://www.douyin.com/search/{quote(kw)}?type=general"
                         page.goto(url, timeout=30000, wait_until="domcontentloaded")
-                        time.sleep(random.uniform(3, 5))
+                        time.sleep(random.uniform(2, 3))  # 更快节奏
 
                         # 滚动加载
                         for _ in range(2):
@@ -138,7 +138,7 @@ class DouyinScraper:
                         html = page.content()
                         soup = BeautifulSoup(html, "html.parser")
 
-                        for card in soup.select("[class*='search-result'], [class*='video-card'], [class*='card']")[:5]:
+                        for card in soup.select("[class*='search-result'], [class*='video-card'], [class*='card']")[:10]:
                             title_el = (card.select_one("[class*='title']") or
                                        card.select_one("[class*='desc']") or
                                        card.select_one("p"))
@@ -148,14 +148,17 @@ class DouyinScraper:
                                 title = clean_text(title_el.get_text())
                                 if title and len(title) > 3 and title not in seen_urls:
                                     seen_urls.add(title)
+                                    like_text = clean_text(like_el.get_text()) if like_el else ""
+                                    # 根据点赞数自动计算信任等级
+                                    trust = self._calc_trust(like_text)
                                     results.append({
                                         "标题": title[:80],
-                                        "点赞": clean_text(like_el.get_text()) if like_el else "",
+                                        "点赞": like_text,
                                         "搜索词": kw,
                                         "来源平台": "douyin",
                                         "来源URL": url,
                                         "_data_category": "attraction_review",
-                                        "_trust_level": 1,
+                                        "_trust_level": trust,
                                     })
                     except Exception as e:
                         logger.debug(f"抖音搜索异常 [{kw}]: {e}")
@@ -173,6 +176,21 @@ class DouyinScraper:
             logger.warning(f"抖音Playwright采集失败: {e}")
 
         return results
+
+    @staticmethod
+    def _calc_trust(like_text: str) -> int:
+        """根据点赞数计算信任等级: >10w→3, >1w→2, 其余→1"""
+        if not like_text:
+            return 1
+        try:
+            like_text = like_text.lower().replace(',', '').replace('，', '')
+            if 'w' in like_text or '万' in like_text:
+                num = float(like_text.replace('w', '').replace('万', '').strip())
+                return 3 if num >= 10 else (2 if num >= 1 else 1)
+            num = int(like_text)
+            return 3 if num >= 100000 else (2 if num >= 10000 else 1)
+        except (ValueError, TypeError):
+            return 1
 
     def _save_cache(self, data: List[Dict]):
         try:
