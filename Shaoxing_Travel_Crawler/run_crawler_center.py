@@ -63,16 +63,18 @@ def main():
     # ========== Phase B: 综合数据生成器 (static/all 模式) ==========
     if mode in ("static", "all"):
         print("\n[Phase B] 综合数据生成器...")
-    from comprehensive.data_generator import DataGenerator
-    gen = DataGenerator()
-    comp = gen.generate_all()
-    gen_total = sum(len(v) for v in comp.values())
-    for cat, items in sorted(comp.items()):
-        if items:
-            print(f"  [{cat}]: {len(items)} 条")
-    print(f"  生成器: {gen_total} 条")
-    for cat, items in comp.items():
-        raw[f"gen_{cat}"] = items
+        from comprehensive.data_generator import DataGenerator
+        gen = DataGenerator()
+        comp = gen.generate_all()
+        gen_total = sum(len(v) for v in comp.values())
+        for cat, items in sorted(comp.items()):
+            if items:
+                print(f"  [{cat}]: {len(items)} 条")
+        print(f"  生成器: {gen_total} 条")
+        for cat, items in comp.items():
+            raw[f"gen_{cat}"] = items
+    else:
+        print("\n[Phase B] 跳过 (dynamic模式)")
 
     # ========== Phase C: 社交平台 (dynamic/all 模式) ==========
     if mode in ("dynamic", "all"):
@@ -82,12 +84,14 @@ def main():
             ("zhihu", ZhihuScraper),
             ("douyin", DouyinScraper),
         ]:
-        try:
-            raw[name] = scraper_cls().run()
-            print(f"  {name}: {len(raw[name])} 条")
-        except Exception as e:
-            print(f"  {name}: ERROR - {e}")
-            raw[name] = []
+            try:
+                raw[name] = scraper_cls().run()
+                print(f"  {name}: {len(raw[name])} 条")
+            except Exception as e:
+                print(f"  {name}: ERROR - {e}")
+                raw[name] = []
+    else:
+        print("\n[Phase C] 跳过 (static模式)")
 
     # ========== Phase D: 交叉验证 (仅传统爬虫数据) ==========
     print("\n[Phase D] 交叉验证 (传统爬虫数据)...")
