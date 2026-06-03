@@ -35,6 +35,10 @@ debug_*.html
 *.tmp
 crawler .txt
 
+# 爬虫输出CSV (运行时生成)
+Shaoxing_Travel_Crawler/output/*.csv
+data/raw/shaoxing_export_*.csv
+
 # 会话记录 (本地调试)
 sessions/
 

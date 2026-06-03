@@ -25,7 +25,7 @@ from data_merger.db_writer import write_to_sqlite
 
 def main():
     print("=" * 70)
-    print("  ScraperHub v4.0 — 目标1700+条")
+    print("  ScraperHub v4.0")
     print("=" * 70)
 
     # ========== Phase A: 传统爬虫 ==========
