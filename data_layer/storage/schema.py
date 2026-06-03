@@ -131,6 +131,21 @@ class Schema:
     );
     """
 
+    # 数据变更追踪表 (Phase 2)
+    TABLE_CHANGE_LOG = """
+    CREATE TABLE IF NOT EXISTS change_log (
+        id              INTEGER PRIMARY KEY AUTOINCREMENT,
+        entity_id       TEXT NOT NULL,              -- 关联实体ID
+        entity_name     TEXT,                       -- 实体名称(冗余便于查询)
+        field_name      TEXT NOT NULL,              -- 变更字段名
+        old_value       TEXT,                       -- 旧值
+        new_value       TEXT,                       -- 新值
+        change_type     TEXT DEFAULT 'update',      -- update/add/delete
+        source_platform TEXT,                       -- 来源平台
+        detected_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """
+
     @classmethod
     def initialize(cls, db_path: Path = None) -> sqlite3.Connection:
         """
@@ -159,6 +174,7 @@ class Schema:
             cls.TABLE_USER_PROFILES,
             cls.TABLE_SAVED_ROUTES,
             cls.TABLE_SCRAPER_RUNS,
+            cls.TABLE_CHANGE_LOG,
             cls.TABLE_VERSION,
         ]:
             conn.execute(ddl)

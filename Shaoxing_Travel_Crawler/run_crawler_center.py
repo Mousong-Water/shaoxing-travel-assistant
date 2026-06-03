@@ -18,44 +18,51 @@ from scrapers.wenglv_scraper import WenglvScraper
 from scrapers.weixin_search import WeixinStaticGuides
 from scrapers.xiaohongshu_scraper import XiaohongshuScraper
 from scrapers.zhihu_scraper import ZhihuScraper
+from scrapers.douyin_scraper import DouyinScraper
 from data_verifier.cross_validator import CrossValidator, FactChecker
 from data_classifier.content_classifier import ContentClassifier
 from data_merger.db_writer import write_to_sqlite
 
 
 def main():
+    import sys as _sys
+    mode = _sys.argv[1] if len(_sys.argv) > 1 else "all"
     print("=" * 70)
-    print("  ScraperHub v4.0")
+    print(f"  ScraperHub v4.0  [模式: {mode}]")
     print("=" * 70)
 
-    # ========== Phase A: 传统爬虫 ==========
-    print("\n[Phase A] 传统爬虫采集...")
+    # ========== Phase A: 传统爬虫 (仅 dynamic/all 模式) ==========
     raw = {}
-    for name, scraper_cls in [
-        ("gov_api", GovApiScraper),
-        ("baike", BaikeScraper),
-        ("dianping", DianpingScraper),
-        ("mafengwo", MafengwoScraper),
-        ("local_news", LocalNewsScraper),
-        ("wenglv", WenglvScraper),
-    ]:
-        try:
-            raw[name] = scraper_cls().run()
-            print(f"  {name}: {len(raw[name])} 条")
-        except Exception as e:
-            print(f"  {name}: ERROR - {e}")
-            raw[name] = []
+    if mode in ("dynamic", "all"):
+        print("\n[Phase A] 传统爬虫采集...")
+        for name, scraper_cls in [
+            ("gov_api", GovApiScraper),
+            ("baike", BaikeScraper),
+            ("dianping", DianpingScraper),
+            ("mafengwo", MafengwoScraper),
+            ("local_news", LocalNewsScraper),
+            ("wenglv", WenglvScraper),
+        ]:
+            try:
+                raw[name] = scraper_cls().run()
+                print(f"  {name}: {len(raw[name])} 条")
+            except Exception as e:
+                print(f"  {name}: ERROR - {e}")
+                raw[name] = []
 
-    # 微信
-    raw["weixin"] = [
-        {"标题": t["主题"], "内容摘要": t["内容摘要"], "时间": t.get("时间", ""),
-         "_data_category": t["_data_category"], "_trust_level": 1}
-        for t in WeixinStaticGuides.COMMON_TOPICS
-    ]
-    print(f"  weixin: {len(raw['weixin'])} 条")
+        # 微信
+        raw["weixin"] = [
+            {"标题": t["主题"], "内容摘要": t["内容摘要"], "时间": t.get("时间", ""),
+             "_data_category": t["_data_category"], "_trust_level": 1}
+            for t in WeixinStaticGuides.COMMON_TOPICS
+        ]
+        print(f"  weixin: {len(raw['weixin'])} 条")
+    else:
+        print("\n[Phase A] 跳过 (static模式)")
 
-    # ========== Phase B: 综合数据生成器 ==========
-    print("\n[Phase B] 综合数据生成器...")
+    # ========== Phase B: 综合数据生成器 (static/all 模式) ==========
+    if mode in ("static", "all"):
+        print("\n[Phase B] 综合数据生成器...")
     from comprehensive.data_generator import DataGenerator
     gen = DataGenerator()
     comp = gen.generate_all()
@@ -67,12 +74,14 @@ def main():
     for cat, items in comp.items():
         raw[f"gen_{cat}"] = items
 
-    # ========== Phase C: 小红书+知乎 (新增) ==========
-    print("\n[Phase C] 小红书+知乎...")
-    for name, scraper_cls in [
-        ("xiaohongshu", XiaohongshuScraper),
-        ("zhihu", ZhihuScraper),
-    ]:
+    # ========== Phase C: 社交平台 (dynamic/all 模式) ==========
+    if mode in ("dynamic", "all"):
+        print("\n[Phase C] 小红书+知乎+抖音...")
+        for name, scraper_cls in [
+            ("xiaohongshu", XiaohongshuScraper),
+            ("zhihu", ZhihuScraper),
+            ("douyin", DouyinScraper),
+        ]:
         try:
             raw[name] = scraper_cls().run()
             print(f"  {name}: {len(raw[name])} 条")
