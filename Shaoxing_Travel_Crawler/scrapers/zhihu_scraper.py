@@ -1,6 +1,6 @@
 """
-知乎搜索采集 (requests搜索页)
-==============================
+知乎搜索采集 (真实requests + 静态回退)
+======================================
 策略: 访问知乎搜索页HTML (无需登录可浏览标题和摘要)
 URL: https://www.zhihu.com/search?type=content&q=绍兴旅游
 
@@ -18,47 +18,98 @@ from crawler_utils.parser_utils import clean_text
 logger = logging.getLogger(__name__)
 
 SEARCH_QUERIES = [
-    "绍兴旅游攻略",
-    "绍兴有什么好玩的地方",
-    "绍兴美食推荐",
-    "绍兴周边游",
-    "绍兴古镇推荐",
+    "绍兴旅游攻略", "绍兴有什么好玩的地方", "绍兴美食推荐",
+    "绍兴周边游", "绍兴古镇推荐", "绍兴三日游", "绍兴亲子游",
 ]
 
-ZHIHU_STATIC = [
-    {"标题":"绍兴有哪些值得去的景点？","摘要":"作为一个绍兴本地人推荐：鲁迅故里(必去)、沈园(陆游唐婉)、东湖(乌篷船)、兰亭(书法圣地)、柯岩鉴湖鲁镇。如果时间充裕可以加上安昌古镇和新昌大佛寺。","赞同":1200,"标签":"景点推荐"},
-    {"标题":"绍兴2-3天自由行怎么安排？","摘要":"D1:鲁迅故里+沈园+书圣故里+仓桥直街。D2:柯岩鉴湖鲁镇(一整天)。D3:东湖乌篷船+兰亭。住宿选越城区200-400元。吃饭推荐咸亨酒店、寻宝记、同心楼。","赞同":890,"标签":"行程规划"},
-    {"标题":"绍兴有什么必吃的美食？","摘要":"绍兴菜是中国八大菜系浙菜的重要分支。必吃:梅干菜扣肉、清汤越鸡、绍兴三臭(臭豆腐霉苋菜梗霉千张)、茴香豆配黄酒。老字号:咸亨酒店、同心楼、荣禄春。","赞同":2300,"标签":"美食推荐"},
-    {"标题":"绍兴和杭州哪个更值得去？","摘要":"两个城市风格不同。杭州大气绍兴精致。绍兴更原生态更有烟火气，安昌古镇比乌镇西塘更真实。喜欢历史文化的推荐绍兴，喜欢自然风光的推荐杭州。","赞同":560,"标签":"对比分析"},
-    {"标题":"绍兴周边有什么小众好玩的地方？","摘要":"推荐新昌穿岩十九峰(丹霞地貌+玻璃栈道)、嵊州崇仁古镇(原生态越剧故乡)、诸暨五泄(东南第一秀水)、上虞覆卮山(千年梯田)。这些地方游客少体验好。","赞同":780,"标签":"小众推荐"},
-    {"标题":"绍兴哪些景点是免费的？","摘要":"免费景点:鲁迅故里(需身份证领票)、书圣故里、仓桥直街、八字桥、安昌古镇(大门票)、府山公园。收费但值得:柯岩115、兰亭70、东湖50、沈园40。","赞同":1500,"标签":"实用信息"},
-    {"标题":"带父母去绍兴怎么玩？","摘要":"父母喜欢历史文化:鲁迅故里+沈园+兰亭+书圣故里。节奏要慢，每天2-3个景点。吃饭选绍兴饭店或咸亨酒店环境好。住宿选越城区方便。","赞同":420,"标签":"亲子家庭"},
-    {"标题":"绍兴的黄酒文化体验推荐","摘要":"黄酒博物馆(了解酿造工艺+品酒)+古越龙山体验馆(定制花雕酒坛)+安昌仁昌酱园(看酱油晒制)。一定要尝尝黄酒奶茶和黄酒棒冰。","赞同":650,"标签":"文化体验"},
-    {"title":"绍兴旅游避坑指南","摘要":"避坑1:兰亭离市区远预留半天。2:东湖乌篷船85元略贵但体验一次值得。3:安昌古镇周末人超多建议工作日。4:柯岩景区很大穿运动鞋。5:夏天绍兴很热做好防晒。","赞同":3200,"标签":"避雷指南"},
-    {"标题":"为什么说绍兴是中国最有文化的城市之一","摘要":"绍兴出了王羲之、陆游、徐渭、鲁迅、蔡元培、秋瑾、周恩来等名人。2500年建城史从未改变城址。书法、黄酒、越剧、师爷文化都源于此。是一座被低估的文化名城。","赞同":4100,"标签":"文化解读"},
+# 静态回退 (知乎高赞回答摘要, 真实爬取失败时使用)
+ZHIHU_FALLBACK = [
+    {"标题":"绍兴有哪些值得去的景点？","摘要":"鲁迅故里(必去)、沈园(陆游唐婉)、东湖(乌篷船)、兰亭(书法圣地)、柯岩鉴湖鲁镇。如果时间充裕可加安昌古镇和新昌大佛寺。","赞同":"1200","标签":"景点推荐"},
+    {"标题":"绍兴2-3天自由行怎么安排？","摘要":"D1:鲁迅故里+沈园+书圣故里+仓桥直街。D2:柯岩鉴湖鲁镇。D3:东湖+兰亭。住宿越城区200-400元。","赞同":"890","标签":"行程规划"},
+    {"标题":"绍兴有什么必吃的美食？","摘要":"梅干菜扣肉、清汤越鸡、绍兴三臭、茴香豆配黄酒。老字号:咸亨酒店、同心楼、荣禄春。","赞同":"2300","标签":"美食推荐"},
+    {"标题":"绍兴哪些景点是免费的？","摘要":"鲁迅故里(身份证领票)、书圣故里、仓桥直街、八字桥、安昌古镇(大门票)、府山公园免费。","赞同":"1500","标签":"实用信息"},
+    {"标题":"绍兴旅游避坑指南","摘要":"兰亭离市区远预留半天。东湖乌篷船85元略贵但值得。安昌古镇周末人超多。柯岩穿运动鞋。夏天做好防晒。","赞同":"3200","标签":"避雷指南"},
 ]
 
 
 class ZhihuScraper:
-    """知乎搜索采集"""
+    """知乎搜索采集 (真实HTTP + 静态回退)"""
 
     def __init__(self, max_items: int = None):
         self.rm = RequestManager(delay_min=2.0, delay_max=4.0, max_retries=2)
         self.max_items = max_items or 80
+        self._platform = "zhihu"
 
     def run(self) -> List[Dict]:
         results = []
-        for post in ZHIHU_STATIC:
-            results.append({
-                "标题": post.get("标题", post.get("title", "")),
-                "摘要": post.get("摘要", ""),
-                "赞同": str(post.get("赞同", 0)),
-                "标签": post.get("标签", ""),
-                "来源平台": "zhihu_static",
-                "来源URL": f"zhihu_static:{post.get('标题','')[:20]}",
-                "_data_category": "attraction_review",
-                "_trust_level": 2,
-            })
 
-        logger.info(f"知乎采集: {len(results)} 条")
+        # 1. 真实搜索
+        live_results = self._scrape_live()
+        results.extend(live_results)
+        logger.info(f"知乎实时: {len(live_results)} 条")
+
+        # 2. 回退
+        if len(results) < 5:
+            for post in ZHIHU_FALLBACK:
+                results.append({
+                    "标题": post["标题"],
+                    "摘要": post["摘要"],
+                    "赞同": post["赞同"],
+                    "标签": post["标签"],
+                    "来源平台": "zhihu_fallback",
+                    "来源URL": f"zhihu_static:{post['标题'][:20]}",
+                    "_data_category": "attraction_review",
+                    "_trust_level": 1,
+                })
+            logger.info(f"知乎回退: {len(ZHIHU_FALLBACK)} 条")
+
         return results[:self.max_items]
+
+    def _scrape_live(self) -> List[Dict]:
+        """真实抓取知乎搜索页"""
+        results = []
+        seen = set()
+
+        for query in SEARCH_QUERIES:
+            if len(results) >= 30:
+                break
+            try:
+                url = f"https://www.zhihu.com/search?type=content&q={quote(query)}"
+                resp, tag = self.rm.get(url)
+
+                if tag != 'ok':
+                    logger.debug(f"知乎搜索[{query}]: {tag}")
+                    continue
+
+                soup = BeautifulSoup(resp.text, 'html.parser')
+
+                for item in soup.select('.List-item, .SearchResultCard, [class*="SearchResult"]')[:5]:
+                    title_el = item.select_one('[class*="title"], h2 a, .ContentItem-title a')
+                    snippet_el = item.select_one('[class*="excerpt"], [class*="content"], .RichText')
+                    vote_el = item.select_one('[class*="vote"], [class*="like"]')
+
+                    if title_el:
+                        title = clean_text(title_el.get_text())
+                        snippet = clean_text(snippet_el.get_text()) if snippet_el else ""
+                        href = title_el.get('href', '')
+                        if 'question' in href or 'answer' in href:
+                            if 'zhihu.com' not in href:
+                                href = 'https://www.zhihu.com' + href
+
+                        if title and len(title) > 3 and title not in seen:
+                            seen.add(title)
+                            results.append({
+                                "标题": title[:80],
+                                "摘要": snippet[:200] if snippet else "",
+                                "赞同": clean_text(vote_el.get_text()) if vote_el else "",
+                                "搜索词": query,
+                                "来源平台": "zhihu",
+                                "来源URL": href if href.startswith('http') else url,
+                                "_data_category": "attraction_review",
+                                "_trust_level": 2,
+                            })
+            except Exception as e:
+                logger.debug(f"知乎搜索异常 [{query}]: {e}")
+                continue
+
+        return results

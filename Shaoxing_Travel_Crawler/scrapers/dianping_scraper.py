@@ -1,142 +1,113 @@
 """
-大众点评数据采集（静态优先）
-================================
-绍兴美食店铺、特色小吃数据库。
-所有数据经人工整理，标注来源便于核实。
+大众点评搜索采集 (真实requests + 静态回退)
+==========================================
+策略: 访问大众点评搜索页 (无需登录可浏览搜索结果摘要)
+URL: https://www.dianping.com/search/keyword/7/0_{关键词}
+
+合规: 仅访问搜索列表页、不登录、合理频率(3-5s)
 """
 
 import logging
+import re
 from typing import List, Dict
+from urllib.parse import quote
+
+from bs4 import BeautifulSoup
+from crawler_utils.request_utils import RequestManager
+from crawler_utils.parser_utils import clean_text
 
 logger = logging.getLogger(__name__)
 
-# 绍兴美食店铺数据库（20家，含地址/人均/推荐菜/类型）
-SHAOXING_FOOD_SHOPS = [
-    # ---- 老字号绍兴菜 ----
-    {"店名": "咸亨酒店", "类型": "绍兴菜·老字号", "地址": "越城区鲁迅中路179号",
-     "人均": "80-120元",
-     "推荐": "茴香豆、绍兴黄酒、梅干菜扣肉、糟鸡",
-     "简介": "创建于清光绪二十年（1894年），因鲁迅小说《孔乙己》闻名天下。店内有'孔乙己欠十九文钱'的趣味招牌，是来绍兴必打卡的文化餐厅。",
-     "来源URL": "dianping_static:xianheng"},
-    {"店名": "寻宝记绍兴菜", "类型": "绍兴菜·网红", "地址": "越城区仓桥直街114号",
-     "人均": "70-100元",
-     "推荐": "醉蟹、梅干菜扣肉、宋嫂鱼羹、绍兴三臭",
-     "简介": "位于仓桥直街核心位置，以新派绍兴菜见长。装修古色古香，将传统绍兴菜与现代口味结合，常年排队。",
-     "来源URL": "dianping_static:xunbaoji"},
-    {"店名": "状元楼", "类型": "绍兴菜·老牌", "地址": "越城区胜利西路",
-     "人均": "60-90元",
-     "推荐": "清汤越鸡、干菜焖肉、鉴湖鱼头",
-     "简介": "绍兴老牌酒楼，以传统绍兴菜见长。清汤越鸡选用本地越鸡，汤清味醇，是绍兴十大名菜之一。",
-     "来源URL": "dianping_static:zhuangyuanlou"},
-    {"店名": "孔乙己酒家", "类型": "绍兴菜·主题餐厅", "地址": "越城区鲁迅中路273号",
-     "人均": "70-100元",
-     "推荐": "茴香豆、花雕鸡、绍兴三臭、臭豆腐",
-     "简介": "鲁迅主题绍兴菜馆，店内随处可见《孔乙己》元素。'多乎哉？不多也'的茴香豆是每桌必点。",
-     "来源URL": "dianping_static:kongyiji"},
-    {"店名": "绍兴饭店", "类型": "绍兴菜·高端", "地址": "越城区环山路8号",
-     "人均": "150-250元",
-     "推荐": "鉴湖河鲜、花雕醉蟹、干菜焖肉",
-     "简介": "绍兴最老牌的高端酒店，位于府山脚下，园林式建筑。接待过众多中外政要，是体验正宗绍兴官府菜的首选。",
-     "来源URL": "dianping_static:shaoxinghotel"},
+SEARCH_KEYWORDS = [
+    "绍兴老字号", "绍兴本帮菜", "绍兴小吃", "绍兴面馆",
+    "绍兴黄酒", "绍兴特产", "绍兴早餐",
+]
 
-    # ---- 小吃面点 ----
-    {"店名": "同心楼", "类型": "小吃面点·百年老店", "地址": "越城区解放北路430号",
-     "人均": "15-30元",
-     "推荐": "生煎包、片儿川、小馄饨",
-     "简介": "绍兴百年老店，以面点小吃闻名。生煎包底脆肉鲜，是绍兴人从小吃到大的味道。每天清晨排长队。",
-     "来源URL": "dianping_static:tongxinlou"},
-    {"店名": "仓桥阿丘面馆", "类型": "面馆·苍蝇馆子", "地址": "越城区仓桥直街",
-     "人均": "15-25元",
-     "推荐": "次坞打面、片儿川、三鲜面",
-     "简介": "仓桥直街巷子里的地道面馆。次坞打面是诸暨特色，手工打制，面条劲道有嚼劲。",
-     "来源URL": "dianping_static:cangqiaoamian"},
-    {"店名": "荣禄春", "类型": "小吃·老字号", "地址": "越城区解放北路",
-     "人均": "20-40元",
-     "推荐": "小笼包、虾肉馄饨、蟹粉小笼",
-     "简介": "始于清同治年间，以绍兴小笼包闻名。皮薄馅大，汤汁鲜美，是本地人的心头好。",
-     "来源URL": "dianping_static:rongluchun"},
-    {"店名": "嵊州小吃（鲁迅故里店）", "类型": "小吃·嵊州特色", "地址": "越城区鲁迅中路鲁迅故里景区附近",
-     "人均": "15-25元",
-     "推荐": "嵊州小笼包（豆腐包）、炒年糕、榨面",
-     "简介": "嵊州是浙江小吃之乡。豆腐包用嫩豆腐做馅，一咬爆汁。炒年糕不是炒的而是带汤的，是嵊州独有吃法。",
-     "来源URL": "dianping_static:shengzhouxiaochi"},
-
-    # ---- 特色小吃 ----
-    {"店名": "王老汉臭豆腐", "类型": "小吃·特产", "地址": "越城区鲁迅中路",
-     "人均": "10-20元",
-     "推荐": "臭豆腐、萝卜丝饼、虾饼",
-     "简介": "绍兴臭豆腐的代表摊位，外酥里嫩，配上甜酱和辣酱，是逛鲁迅故里时必吃的街头美食。",
-     "来源URL": "dianping_static:wanglaohan"},
-    {"店名": "高老太奶油小攀", "类型": "甜品·老字号", "地址": "越城区新建南路",
-     "人均": "8-15元",
-     "推荐": "奶油小攀（绍兴版蛋挞）",
-     "简介": "奶油小攀是绍兴独有的传统甜品，类似蛋挞但口感更绵密。高老太是公认最正宗的，开了三十多年。",
-     "来源URL": "dianping_static:gaolao"},
-    {"店名": "黄酒博物馆文创店", "类型": "特产购物", "地址": "越城区下大路557号",
-     "人均": "30-200元",
-     "推荐": "各种年份黄酒、黄酒棒冰、黄酒奶茶",
-     "简介": "中国黄酒博物馆附设商店，可品酒购酒。从三年陈到三十年陈应有尽有，还有黄酒棒冰、黄酒奶茶等文创产品。",
-     "来源URL": "dianping_static:huangjiumuseum"},
-
-    # ---- 新派/网红 ----
-    {"店名": "绘璟轩·黄酒奶茶", "类型": "饮品·网红", "地址": "越城区仓桥直街",
-     "人均": "20-35元",
-     "推荐": "黄酒奶茶、黄酒拿铁、黄酒冰淇淋",
-     "简介": "绍兴黄酒新喝法的代表店铺。黄酒+奶茶的跨界组合意外好喝，酒香与奶香融合，是年轻人的打卡圣地。",
-     "来源URL": "dianping_static:huijingxuan"},
-    {"店名": "柒舍小院", "类型": "私房菜·文艺", "地址": "越城区西小路",
-     "人均": "80-120元",
-     "推荐": "花雕鸡、酱鸭舌、梅干菜河鳗",
-     "简介": "隐藏在巷弄里的文艺私房菜馆，小院环境雅致。需提前预约，菜品精致有创意。",
-     "来源URL": "dianping_static:qishexiaoyuan"},
-    {"店名": "绍东家", "类型": "绍兴菜·连锁", "地址": "越城区世茂广场",
-     "人均": "50-80元",
-     "推荐": "花雕醉鸡、酱鸭、酒酿圆子",
-     "简介": "绍兴本地连锁品牌，菜品标准化，环境干净现代。适合不习惯苍蝇馆子的游客，味道正宗。",
-     "来源URL": "dianping_static:shaodongjia"},
-
-    # ---- 柯桥/安昌 ----
-    {"店名": "安昌古镇仁昌酱园", "类型": "特产·百年酱园", "地址": "柯桥区安昌古镇内",
-     "人均": "20-50元",
-     "推荐": "母子酱油、太油、酱鸭、酱肉",
-     "简介": "创建于清光绪十八年（1892年），至今仍用传统工艺晒制酱油。园区免费参观，可购买手工酱油和酱货。",
-     "来源URL": "dianping_static:renchang"},
-    {"店名": "安昌古镇陈记扯白糖", "类型": "小吃·非遗", "地址": "柯桥区安昌古镇老街",
-     "人均": "10-20元",
-     "推荐": "扯白糖、姜糖、花生糖",
-     "简介": "扯白糖是绍兴非遗技艺。师傅现场拉制，将滚烫糖浆反复拉扯至银白色，切成小块，甜而不腻。",
-     "来源URL": "dianping_static:chenjitang"},
-    {"店名": "柯桥越乡小吃街", "类型": "小吃聚集地", "地址": "柯桥区万达广场附近",
-     "人均": "20-50元",
-     "推荐": "臭豆腐、炒年糕、黄酒棒冰、萝卜丝饼",
-     "简介": "柯桥区小吃集中地，各类绍兴特色小吃一应俱全，适合一站式品尝。",
-     "来源URL": "dianping_static:yuexiangstreet"},
+# 静态回退 (18家绍兴知名店铺)
+SHAOXING_SHOPS_FALLBACK = [
+    {"店名":"咸亨酒店","类型":"绍兴菜·老字号","地址":"越城区鲁迅中路179号","人均":"80-120元","推荐":"茴香豆、绍兴黄酒、梅干菜扣肉","简介":"清光绪二十年(1894年)创建，因鲁迅小说《孔乙己》闻名"},
+    {"店名":"寻宝记绍兴菜","类型":"绍兴菜·网红","地址":"越城区仓桥直街114号","人均":"70-100元","推荐":"醉蟹、梅干菜扣肉、宋嫂鱼羹","简介":"仓桥直街核心位置，常年排队"},
+    {"店名":"同心楼","类型":"小吃面点·百年老店","地址":"越城区解放北路430号","人均":"15-30元","推荐":"生煎包、片儿川","简介":"百年老店，生煎包底脆肉鲜汁多"},
+    {"店名":"状元楼","类型":"绍兴菜·老牌","地址":"越城区胜利西路","人均":"60-90元","推荐":"清汤越鸡、干菜焖肉","简介":"绍兴老牌酒楼"},
+    {"店名":"孔乙己酒家","类型":"绍兴菜·主题","地址":"越城区鲁迅中路273号","人均":"70-100元","推荐":"茴香豆、花雕鸡","简介":"鲁迅主题绍兴菜馆"},
+    {"店名":"高老太奶油小攀","类型":"甜品·老字号","地址":"越城区新建南路","人均":"8-15元","推荐":"奶油小攀","简介":"绍兴独有传统甜品，开了三十多年"},
+    {"店名":"绘璟轩·黄酒奶茶","type":"饮品·网红","地址":"越城区仓桥直街","人均":"20-35元","推荐":"黄酒奶茶、黄酒拿铁","简介":"绍兴黄酒新喝法代表"},
+    {"店名":"仓桥阿丘面馆","type":"面馆","地址":"越城区仓桥直街","人均":"15-25元","推荐":"次坞打面、片儿川","简介":"仓桥直街地道面馆"},
 ]
 
 
 class DianpingScraper:
-    """大众点评数据采集（静态优先）"""
+    """大众点评搜索采集 (真实HTTP + 静态回退)"""
 
     def __init__(self, max_items: int = None):
+        self.rm = RequestManager(delay_min=3.0, delay_max=5.0, max_retries=2)
         self.max_items = max_items
 
     def run(self) -> List[Dict]:
         results = []
-        items = SHAOXING_FOOD_SHOPS[:self.max_items] if self.max_items else SHAOXING_FOOD_SHOPS
 
-        for shop in items:
-            results.append({
-                '店名': shop['店名'],
-                '类型': shop['类型'],
-                '地址': shop['地址'],
-                '人均': shop['人均'],
-                '推荐': shop['推荐'],
-                '简介': shop['简介'],
-                '来源': 'dianping_static',
-                '来源URL': shop.get('来源URL', 'dianping_static:' + shop['店名']),
-                '_data_category': 'food_shop',
-                '_trust_level': 2,
-            })
+        # 1. 真实搜索
+        live_results = self._scrape_live()
+        results.extend(live_results)
+        logger.info(f"点评实时: {len(live_results)} 条")
 
-        logger.info(f"大众点评采集: {len(results)} 条")
+        # 2. 回退
+        if len(results) < 8:
+            for shop in SHAOXING_SHOPS_FALLBACK:
+                results.append({
+                    "店名": shop["店名"], "类型": shop["类型"],
+                    "地址": shop["地址"], "人均": shop.get("人均", ""),
+                    "推荐": shop["推荐"], "简介": shop["简介"],
+                    "来源平台": "dianping_fallback",
+                    "来源URL": f"dianping_static:{shop['店名']}",
+                    "_data_category": "food_shop",
+                    "_trust_level": 1,
+                })
+            logger.info(f"点评回退: {len(SHAOXING_SHOPS_FALLBACK)} 条")
+
+        return results[:self.max_items] if self.max_items else results
+
+    def _scrape_live(self) -> List[Dict]:
+        """真实抓取大众点评搜索页"""
+        results = []
+        seen = set()
+
+        for kw in SEARCH_KEYWORDS:
+            if len(results) >= 20:
+                break
+            try:
+                url = f"https://www.dianping.com/search/keyword/7/0_{quote(kw)}"
+                resp, tag = self.rm.get(url)
+
+                if tag == 'blocked':
+                    logger.debug(f"点评被拦截 [{kw}]")
+                    break
+                if tag != 'ok':
+                    continue
+
+                soup = BeautifulSoup(resp.text, 'html.parser')
+
+                for card in soup.select('.shop-list li, .shop-item, [class*="shop"]')[:5]:
+                    name_el = card.select_one('h4, [class*="title"] a, a[href*="/shop/"]')
+                    addr_el = card.select_one('[class*="addr"], .address, .tag-addr')
+                    price_el = card.select_one('[class*="price"], .avg-price')
+
+                    if name_el:
+                        name = clean_text(name_el.get_text())
+                        if name and len(name) > 1 and name not in seen:
+                            seen.add(name)
+                            results.append({
+                                "店名": name[:30],
+                                "地址": clean_text(addr_el.get_text()) if addr_el else "",
+                                "人均": clean_text(price_el.get_text()) if price_el else "",
+                                "搜索词": kw,
+                                "来源平台": "dianping",
+                                "来源URL": url,
+                                "_data_category": "food_shop",
+                                "_trust_level": 2,
+                            })
+            except Exception as e:
+                logger.debug(f"点评搜索异常 [{kw}]: {e}")
+                continue
+
         return results

@@ -1,101 +1,109 @@
 """
-马蜂窝游记攻略采集（静态优先）
-================================
-绍兴景点游玩攻略、路线建议、实用贴士。
+马蜂窝攻略采集 (真实requests + 静态回退)
+========================================
+策略: 访问马蜂窝搜索页 + 景点攻略页
+URL: https://www.mafengwo.cn/search/s.php?q=绍兴
+
+合规: 仅访问公开页面、不登录、合理频率(3-5s)
 """
 
 import logging
 from typing import List, Dict
+from urllib.parse import quote
+
+from bs4 import BeautifulSoup
+from crawler_utils.request_utils import RequestManager
+from crawler_utils.parser_utils import clean_text
 
 logger = logging.getLogger(__name__)
 
-# 绍兴各景点攻略数据库（12条详细攻略）
-MAFENGWO_GUIDES = [
-    # ---- 鲁迅故里 ----
-    {"景点": "鲁迅故里", "游玩建议": "建议上午8:30开门时到达，避开10点后的旅行团高峰",
-     "推荐游览顺序": "鲁迅祖居→三味书屋→百草园→鲁迅纪念馆→鲁迅笔下风情园",
-     "耗时": "2-3小时", "最佳季节": "春秋（3-5月、9-11月）",
-     "贴士": "免费不免票，需凭身份证领票；三味书屋有'早'字课桌可看；百草园免费开放",
-     "来源URL": "mafengwo_static:luxunguli"},
-    # ---- 沈园 ----
-    {"景点": "沈园", "游玩建议": "建议下午3点后入园，白天赏园+傍晚看《沈园之夜》演出",
-     "推荐游览顺序": "断云石→诗境石→孤鹤轩→钗头凤碑→葫芦池→六朝井亭",
-     "耗时": "1.5-2小时（不含演出）", "最佳季节": "春秋季，4月樱花季最佳",
-     "贴士": "夜游演出需另购票；钗头凤碑前可挂同心锁；园内有陆游纪念馆",
-     "来源URL": "mafengwo_static:shenyuan"},
-    # ---- 东湖 ----
-    {"景点": "东湖", "游玩建议": "必乘乌篷船！建议坐船进（领略水洞奇观）、步行出（欣赏全景）",
-     "推荐游览顺序": "入口码头→陶公洞（船）→仙桃洞（船）→听湫亭→霞川桥→绕门山",
-     "耗时": "2-3小时", "最佳季节": "春夏（荷花6-7月盛开）、秋季",
-     "贴士": "乌篷船票85元/人另购；节假日排队1小时起，建议工作日去；陶公洞内温差约10℃",
-     "来源URL": "mafengwo_static:donghu"},
-    # ---- 兰亭 ----
-    {"景点": "兰亭景区", "游玩建议": "最好的季节是春天，竹林新绿、曲水流觞活动丰富",
-     "推荐游览顺序": "鹅池碑→流觞亭→御碑亭→王右军祠→临池十八缸→书法博物馆",
-     "耗时": "2-3小时", "最佳季节": "春季（3-4月书法节）、秋季",
-     "贴士": "农历三月初三兰亭书法节最为热闹；可体验曲水流觞活动；出口处可购买文房四宝",
-     "来源URL": "mafengwo_static:lanting"},
-    # ---- 柯岩 ----
-    {"景点": "柯岩风景区", "游玩建议": "景区较大，建议安排半天时间。柯岩看石、鉴湖坐船、鲁镇看演出",
-     "推荐游览顺序": "柯岩入口→大佛→云骨→鉴湖码头→葫芦醉岛→鲁镇→鲁镇演出",
-     "耗时": "3-4小时", "最佳季节": "春秋（鉴湖桂花9-10月飘香）",
-     "贴士": "联票115元含三景区；鲁镇有社戏表演；鉴湖古纤道不要错过",
-     "来源URL": "mafengwo_static:keyan"},
-    # ---- 安昌古镇 ----
-    {"景点": "安昌古镇", "游玩建议": "腊月最佳！腊味挂满屋檐，年味最浓。平时周末去也很悠闲",
-     "推荐游览顺序": "古镇入口→仁昌酱园→老街→福安居茶馆→师爷馆→穗康钱庄",
-     "耗时": "2-3小时", "最佳季节": "冬季（腊月风情节）、秋季",
-     "贴士": "扯白糖现场制作可观看；腊肠/酱鸭是必买特产；无需门票（部分小馆另收费）",
-     "来源URL": "mafengwo_static:anchang"},
-    # ---- 书圣故里 ----
-    {"景点": "书圣故里", "游玩建议": "适合慢慢逛，感受老绍兴的烟火气。题扇桥和躲婆弄的故事很有趣",
-     "推荐游览顺序": "题扇桥→躲婆弄→戒珠寺→蕺山街→笔飞弄→王羲之陈列馆",
-     "耗时": "1-2小时", "最佳季节": "四季皆宜",
-     "贴士": "免费开放，全天可逛；蕺山街上的老茶馆值得坐坐；可步行至蔡元培故居",
-     "来源URL": "mafengwo_static:shushengguli"},
-    # ---- 仓桥直街 ----
-    {"景点": "仓桥直街", "游玩建议": "傍晚时分最美，落日余晖洒在河面上。适合晚饭后闲逛",
-     "推荐游览顺序": "城市广场入口→仓桥直街主街→寻宝记/阿丘面馆→河边茶馆",
-     "耗时": "1-2小时", "最佳季节": "四季皆宜",
-     "贴士": "寻宝记常年排队建议提前拿号；街上有多家文艺小店；夜色中的红灯笼很有氛围",
-     "来源URL": "mafengwo_static:cangqiao"},
-    # ---- 多日游路线 ----
-    {"景点": "绍兴2日经典游", "游玩建议": "适合首次来绍兴，覆盖最核心景点，节奏适中",
-     "推荐路线": "D1:鲁迅故里(上午)→沈园(下午)→仓桥直街(晚上) | D2:东湖(上午)→兰亭(下午)→书圣故里(傍晚)",
-     "耗时": "2天", "贴士": "D1景点集中在越城区步行可达；D2需乘车，东湖和兰亭相距约15公里",
-     "来源URL": "mafengwo_static:route2day"},
-    {"景点": "绍兴3日深度游", "游玩建议": "涵盖市区精华+柯岩鉴湖+安昌古镇，适合深度体验",
-     "推荐路线": "D1:鲁迅故里→沈园→书圣故里(晚) | D2:柯岩风景区(全天)→仓桥直街(晚) | D3:东湖(上午)→兰亭(下午)→安昌古镇(下午)",
-     "耗时": "3天", "贴士": "可购买绍兴旅游联票；D2建议打车往返柯岩；D3东湖早去人少",
-     "来源URL": "mafengwo_static:route3day"},
-    {"景点": "绍兴美食一日游", "游玩建议": "以吃为主题，串联绍兴最地道的美味",
-     "推荐路线": "同心楼(早餐生煎)→鲁迅故里(王老汉臭豆腐)→咸亨酒店(午餐)→高老太奶油小攀(甜品)→寻宝记(晚餐)→绘璟轩(黄酒奶茶收尾)",
-     "耗时": "1天", "贴士": "少量多餐，每样尝一点；黄酒棒冰随手可买，边走边吃",
-     "来源URL": "mafengwo_static:foodroute"},
-    {"景点": "绍兴亲子2日游", "游玩建议": "适合带小朋友，节奏轻松，兼顾趣味和教育",
-     "推荐路线": "D1:鲁迅故里(三味书屋体验)→百草园→黄酒博物馆 | D2:柯岩(坐船)→鲁镇(社戏)→安昌(扯白糖体验)",
-     "耗时": "2天", "贴士": "三味书屋有私塾体验课；百草园可以认植物；扯白糖观看+品尝孩子都喜欢",
-     "来源URL": "mafengwo_static:familyroute"},
+SEARCH_QUERIES = [
+    "绍兴旅游攻略", "绍兴景点", "绍兴美食", "绍兴古镇",
+    "绍兴三日游", "绍兴亲子", "绍兴周边",
+]
+
+# 静态回退 (12条攻略)
+GUIDES_FALLBACK = [
+    {"景点":"鲁迅故里","游玩建议":"建议上午9点前到达避开人流高峰","推荐游览顺序":"鲁迅祖居→三味书屋→百草园→鲁迅纪念馆","耗时":"2-3小时","贴士":"免费不免票需凭身份证领票"},
+    {"景点":"沈园","游玩建议":"下午3点后入园，白天赏园+傍晚看演出","推荐游览顺序":"断云石→孤鹤轩→钗头凤碑→葫芦池","耗时":"1.5-2小时","贴士":"夜游演出需另购票"},
+    {"景点":"东湖","游玩建议":"乘乌篷船进、步行出","推荐游览顺序":"码头→陶公洞→仙桃洞→听湫亭","耗时":"2-3小时","贴士":"乌篷船85元另购；节假日排队"},
+    {"景点":"兰亭景区","游玩建议":"春天最佳竹林新绿曲水流觞","推荐游览顺序":"鹅池碑→流觞亭→御碑亭→王右军祠","耗时":"2-3小时","贴士":"三月初三书法节最热闹"},
+    {"景点":"柯岩风景区","游玩建议":"安排半天柯岩看石鉴湖坐船鲁镇看演出","推荐游览顺序":"入口→大佛→云骨→鉴湖→葫芦醉岛→鲁镇","耗时":"3-4小时","贴士":"联票115元含三景区"},
+    {"景点":"安昌古镇","游玩建议":"腊月最佳年味最浓","推荐游览顺序":"入口→仁昌酱园→老街→师爷馆","耗时":"2-3小时","贴士":"扯白糖现场制作可观看"},
 ]
 
 
 class MafengwoScraper:
-    """马蜂窝攻略采集"""
+    """马蜂窝攻略采集 (真实HTTP + 静态回退)"""
 
     def __init__(self, max_items: int = None):
+        self.rm = RequestManager(delay_min=3.0, delay_max=5.0, max_retries=2)
         self.max_items = max_items
 
     def run(self) -> List[Dict]:
         results = []
-        items = MAFENGWO_GUIDES[:self.max_items] if self.max_items else MAFENGWO_GUIDES
 
-        for guide in items:
-            item = dict(guide)
-            item['来源'] = 'mafengwo_static'
-            item['来源URL'] = guide.get('来源URL', 'mafengwo_static:' + guide.get('景点', ''))
-            item['_data_category'] = 'attraction_review' if '日游' not in guide.get('景点','') else 'travel_route'
-            item['_trust_level'] = 2
-            results.append(item)
+        # 1. 真实抓取
+        live_results = self._scrape_live()
+        results.extend(live_results)
+        logger.info(f"马蜂窝实时: {len(live_results)} 条")
 
-        logger.info(f"马蜂窝攻略: {len(results)} 条")
+        # 2. 回退
+        if len(results) < 5:
+            for guide in GUIDES_FALLBACK:
+                results.append({
+                    "景点": guide["景点"],
+                    "游玩建议": guide["游玩建议"],
+                    "推荐游览顺序": guide["推荐游览顺序"],
+                    "耗时": guide["耗时"],
+                    "贴士": guide["贴士"],
+                    "来源平台": "mafengwo_fallback",
+                    "来源URL": f"mafengwo_static:{guide['景点']}",
+                    "_data_category": "attraction_review",
+                    "_trust_level": 1,
+                })
+            logger.info(f"马蜂窝回退: {len(GUIDES_FALLBACK)} 条")
+
+        return results[:self.max_items] if self.max_items else results
+
+    def _scrape_live(self) -> List[Dict]:
+        """真实抓取马蜂窝搜索页"""
+        results = []
+        seen = set()
+
+        for query in SEARCH_QUERIES:
+            if len(results) >= 20:
+                break
+            try:
+                url = f"https://www.mafengwo.cn/search/s.php?q={quote(query)}"
+                resp, tag = self.rm.get(url)
+
+                if tag != 'ok':
+                    logger.debug(f"马蜂窝搜索[{query}]: {tag}")
+                    continue
+
+                soup = BeautifulSoup(resp.text, 'html.parser')
+
+                for item in soup.select('.search-list .item, [class*="search-item"], .list-item')[:5]:
+                    title_el = item.select_one('h3 a, [class*="title"] a, a[href*="/poi/"]')
+                    desc_el = item.select_one('[class*="desc"], .summary, p')
+
+                    if title_el:
+                        title = clean_text(title_el.get_text())
+                        href = title_el.get('href', '')
+                        if title and len(title) > 2 and title not in seen:
+                            seen.add(title)
+                            results.append({
+                                "景点": title[:50],
+                                "游玩建议": clean_text(desc_el.get_text())[:200] if desc_el else "",
+                                "搜索词": query,
+                                "来源平台": "mafengwo",
+                                "来源URL": href if href.startswith('http') else f"https://www.mafengwo.cn{href}" if href else url,
+                                "_data_category": "attraction_review",
+                                "_trust_level": 2,
+                            })
+            except Exception as e:
+                logger.debug(f"马蜂窝搜索异常 [{query}]: {e}")
+                continue
+
         return results
