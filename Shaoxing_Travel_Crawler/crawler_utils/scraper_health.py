@@ -58,13 +58,16 @@ def check_scraper(name: str, module_path: str, class_name: str) -> Dict:
             result["回退数据"] = "⚠️ 无"
             result["问题"].append("无静态回退数据，网络失败将返回空")
 
-        # 检查3: 是否继承BaseScraper
+        # 检查3: 是否继承BaseScraper或ScraperMixin
         from scrapers.base_scraper import BaseScraper
+        from crawler_utils.scraper_mixin import ScraperMixin
         if issubclass(cls, BaseScraper):
-            result["继承基类"] = "✅"
+            result["继承基类"] = "✅ BaseScraper"
+        elif issubclass(cls, ScraperMixin):
+            result["继承基类"] = "✅ ScraperMixin"
         else:
             result["继承基类"] = "⚠️ 未继承"
-            result["问题"].append("未继承BaseScraper，缺少标准流程(重试/去重/CSV)")
+            result["问题"].append("未继承BaseScraper/ScraperMixin，缺少标准流程")
 
         # 检查4: 是否有run()方法
         if hasattr(instance, 'run') and callable(instance.run):
